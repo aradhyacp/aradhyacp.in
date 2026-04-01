@@ -17,16 +17,16 @@ export default function Page() {
         <div className="absolute inset-0 z-0">
           <Floatinglines
             enabledWaves={["top", "middle", "bottom"]}
-            lineCount={[4, 4, 4]}
-            lineDistance={[6, 6, 6]}
-            topWavePosition={{ x: 10.0, y: 0.5, rotate: -0.4 }}
-            middleWavePosition={{ x: 5.0, y: 0.0, rotate: 0.2 }}
-            bottomWavePosition={{ x: 2.0, y: -0.7, rotate: 0.4 }}
-            bendRadius={4}
-            bendStrength={-0.4}
+            lineCount={5}
+            lineDistance={5}
+            // topWavePosition={{ x: 10.0, y: 0.5, rotate: -0.4 }}
+            // middleWavePosition={{ x: 5.0, y: 0.0, rotate: 0.2 }}
+            // bottomWavePosition={{ x: 2.0, y: -0.7, rotate: 0.4 }}
+            bendRadius={5}
+            bendStrength={-0.5}
             interactive={true}
             parallax={true}
-            linesGradient={[]}
+            // linesGradient={[]}
           />
         </div>
         <Hero />
