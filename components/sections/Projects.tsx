@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import MacOSCard from "@/components/ui/MacOSCard";
 import { ProjectsDecoration } from "@/components/ui/SectionDecorations";
+import ShinyText from "../ShinyText";
 
 interface Project {
   name: string;
@@ -97,6 +98,19 @@ export default function Projects() {
           <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
             Proof of Work
           </h2>
+          <ShinyText 
+          text="Get In Touch"
+  speed={2}
+  delay={0}
+  color="#b5b5b5"
+  shineColor="#ffffff"
+  spread={120}
+  direction="left"
+  yoyo={false}
+  pauseOnHover={false}
+  disabled={false} 
+  className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl"
+  />
           <p className="mt-4 max-w-2xl text-lg text-white/60">
             Real projects with real users. Built from curiosity, not for a
             resume.

@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { GitHubCalendar } from "react-github-calendar";
 import TechMarquee from "@/components/ui/TechMarquee";
+import ShinyText from "../ShinyText";
 
 export default function GitHubStack() {
   return (
@@ -20,9 +21,22 @@ export default function GitHubStack() {
           <div className="mb-2 font-mono text-sm uppercase tracking-widest text-[#3fb950]">
             02 / GitHub & Stack
           </div>
-          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
+          {/* <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
             Contributions & Tech
-          </h2>
+          </h2> */}
+          <ShinyText 
+          text="Contributions & Tech"
+  speed={2}
+  delay={0}
+  color="#b5b5b5"
+  shineColor="#ffffff"
+  spread={120}
+  direction="left"
+  yoyo={false}
+  pauseOnHover={false}
+  disabled={false}
+  className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl"
+  />
         </motion.div>
 
         {/* GitHub Calendar */}

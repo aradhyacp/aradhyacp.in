@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import MacOSCard from "@/components/ui/MacOSCard";
 import { OpenSourceDecoration } from "@/components/ui/SectionDecorations";
+import ShinyText from "../ShinyText";
 
 interface Contribution {
   repo: string;
@@ -87,9 +88,22 @@ export default function OpenSource() {
           <div className="mb-2 font-mono text-sm uppercase tracking-widest text-[#3fb950]">
             03 / Open Source
           </div>
-          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
+          {/* <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
             Open Source Contributions
-          </h2>
+          </h2> */}
+           <ShinyText 
+          text="Open Source Contributions"
+  speed={2}
+  delay={0}
+  color="#b5b5b5"
+  shineColor="#ffffff"
+  spread={120}
+  direction="left"
+  yoyo={false}
+  pauseOnHover={false}
+  disabled={false} 
+  className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl"
+  />
           <p className="mt-4 max-w-2xl text-lg text-white/60">
             I contribute to tools I actually use. When I notice rough edges, I
             fix them.

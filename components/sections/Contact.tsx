@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import ShinyText from "../ShinyText";
 
 const GithubIcon = () => (
   <svg viewBox="0 0 24 24" className="h-6 w-6 fill-current">
@@ -57,9 +58,22 @@ export default function Contact() {
           <div className="mb-2 font-mono text-sm uppercase tracking-widest text-[#3fb950]">
             05 / Contact
           </div>
-          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
+          {/* <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
             Get In Touch
-          </h2>
+          </h2> */}
+          <ShinyText 
+          text="Get In Touch"
+  speed={2}
+  delay={0}
+  color="#b5b5b5"
+  shineColor="#ffffff"
+  spread={120}
+  direction="left"
+  yoyo={false}
+  pauseOnHover={false}
+  disabled={false} 
+  className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl"
+  />
         </motion.div>
 
         {/* Message */}

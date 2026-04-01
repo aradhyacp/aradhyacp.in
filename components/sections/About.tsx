@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import ShinyText from "@/components/ShinyText";
 
 const interests = [
   { icon: "🤖", label: "AI Applications" },
@@ -26,9 +27,22 @@ export default function About() {
           <div className="mb-2 font-mono text-sm uppercase tracking-widest text-[#3fb950]">
             01 / About
           </div>
-          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
+          {/* <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
             About Me
-          </h2>
+          </h2> */}
+          <ShinyText
+            text="About Me"
+            speed={2}
+            delay={0}
+            color="#b5b5b5"
+            shineColor="#ffffff"
+            spread={120}
+            direction="left"
+            yoyo={false}
+            pauseOnHover={false}
+            disabled={false}
+            className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl"
+          />
         </motion.div>
 
         <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
