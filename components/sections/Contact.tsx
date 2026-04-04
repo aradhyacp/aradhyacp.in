@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import ShinyText from "../ShinyText";
+import TiltedCard from "../TiltedCard";
 
 const GithubIcon = () => (
   <svg viewBox="0 0 24 24" className="h-6 w-6 fill-current">
@@ -61,33 +62,51 @@ export default function Contact() {
           {/* <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
             Get In Touch
           </h2> */}
-          <ShinyText 
-          text="Get In Touch"
-  speed={2}
-  delay={0}
-  color="#b5b5b5"
-  shineColor="#ffffff"
-  spread={120}
-  direction="left"
-  yoyo={false}
-  pauseOnHover={false}
-  disabled={false} 
-  className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl"
-  />
+          <ShinyText
+            text="Get In Touch"
+            speed={2}
+            delay={0}
+            color="#b5b5b5"
+            shineColor="#ffffff"
+            spread={120}
+            direction="left"
+            yoyo={false}
+            pauseOnHover={false}
+            disabled={false}
+            className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl"
+          />
         </motion.div>
 
         {/* Message */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-white/60"
-        >
-          I&apos;m always open to new opportunities, collaborations, and
-          interesting projects. Whether you want to discuss tech, open source,
-          or just say hi — feel free to reach out.
-        </motion.p>
+        <div className="flex mb-6 items-center">
+          <TiltedCard
+            imageSrc={"https://avatars.githubusercontent.com/u/135510032?v=4"}
+            showTooltip={false}
+            captionText="Kendrick Lamar - GNX"
+            // containerHeight="300px"
+            // containerWidth="300px"
+            // imageHeight="300px"
+            // imageWidth="300px"
+            rotateAmplitude={12}
+            scaleOnHover={1.05}
+            showMobileWarning={false}
+            displayOverlayContent
+            overlayContent={
+              <p className="bg-[#80808095] ">Kendrick Lamar - GNX</p>
+            }
+          />
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-white/60"
+          >
+            I&apos;m always open to new opportunities, collaborations, and
+            interesting projects. Whether you want to discuss tech, open source,
+            or just say hi — feel free to reach out.
+          </motion.p>
+        </div>
 
         {/* Email */}
         <motion.div
