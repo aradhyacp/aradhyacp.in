@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import MacOSCard from "@/components/ui/MacOSCard";
 import SocialLinks from "@/components/ui/SocialLinks";
+import { LucideMail } from "lucide-react";
 
 type GithubProfile = {
   login: string;
@@ -211,7 +212,7 @@ export default function Hero() {
                 Follow on GitHub
               </a>
               <div className="flex gap-2 text-white/70 font-medium">
-                <span>Contact me: </span>
+                <span className="flex items-center gap-1"><LucideMail className="w-3.5 h-3.5 shrink-0"/>Mail: </span>
                 <a className="hover:underline" href="mailto:boss@aradhyacp.in">
                   boss@aradhyacp.in
                 </a>
