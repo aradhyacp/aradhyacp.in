@@ -2,9 +2,10 @@
 
 import { motion } from "motion/react";
 import { GitHubCalendar } from "react-github-calendar";
-import TechMarquee from "@/components/ui/TechMarquee";
+import TechnicalArsenal from "@/components/ui/TechnicalArsenal";
 import ShinyText from "../ShinyText";
 import BorderGlow from "@/components/BorderGlow"
+import TechMarquee from "../ui/TechMarquee";
 
 export default function GitHubStack() {
   return (
@@ -105,15 +106,9 @@ export default function GitHubStack() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="mb-8 text-center">
-            <h3 className="mb-2 text-lg font-medium text-white">Tech Stack</h3>
-            <p className="text-sm text-white/50">
-              Technologies I work with daily
-            </p>
-          </div>
-
-          <TechMarquee />
-          <TechMarquee reverse className="mt-4" />
+          <div className="mt-28">
+          <TechnicalArsenal/></div>
+          <TechMarquee className="mt-15" />
         </motion.div>
       </div>
     </section>
