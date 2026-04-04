@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 interface TechItem {
   name: string;
@@ -47,14 +48,16 @@ export default function TechMarquee({ className, reverse = false }: TechMarqueeP
               className="group flex flex-col items-center gap-3 transition-transform hover:scale-110"
             >
               <div className="relative h-12 w-12 md:h-16 md:w-16 rounded-xl bg-white/5 p-3 transition-all group-hover:bg-white/10 group-hover:shadow-lg">
-                <img
+                <Image
                   src={tech.icon}
                   alt={tech.name}
                   className={cn(
                     "h-full w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity",
                     tech.invert && "invert"
                   )}
-                  loading="lazy"
+                  height={40}
+                  width={40}
+                  sizes="40px"
                 />
               </div>
               <span className="text-xs text-white/40 group-hover:text-white/70 transition-colors font-medium">
