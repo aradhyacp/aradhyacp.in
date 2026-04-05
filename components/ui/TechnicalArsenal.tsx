@@ -168,7 +168,7 @@ export default function TechnicalArsenal({className}:TechArsenalProps) {
       {/* Right Section */}
       <div className="space-y-6">
         {/* Tabs */}
-        <div className="flex flex-wrap items-center gap-6 border border-white/10 px-4 pt-3 rounded-sm justify-around pb-0">
+        <div className="flex flex-wrap items-center gap-6  px-4 pt-3 justify-around pb-0 rounded-lg border border-white/10 bg-white/[0.02] p-4 text-center">
           {techCategories.map((category) => (
             <button
               key={category.id}
