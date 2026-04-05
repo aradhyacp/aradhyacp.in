@@ -49,14 +49,14 @@ export default function Page() {
         <div className="pointer-events-none absolute inset-0 z-0 grid-glow opacity-40" />
 
         {/* Horizontal ruler lines */}
-        <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        {/* <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
           <div className="ruler-line absolute top-[12%] w-full" />
           <div className="ruler-line absolute top-[28%] w-full" />
           <div className="ruler-line absolute top-[45%] w-full" />
           <div className="ruler-line absolute top-[62%] w-full" />
           <div className="ruler-line absolute top-[78%] w-full" />
           <div className="ruler-line absolute top-[92%] w-full" />
-        </div>
+        </div> */}
 
         {/* Vertical ruler lines */}
         <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden hidden lg:block">
