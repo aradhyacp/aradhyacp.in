@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import ShinyText from "@/components/ShinyText";
+import ProfileCard from "../ProfileCard"
 
 const interests = [
   { icon: "🤖", label: "AI Applications" },
@@ -90,7 +91,7 @@ export default function About() {
                 </div>
               </div>
               <div className="rounded-lg border border-white/10 bg-white/[0.02] p-4 text-center">
-                <div className="text-2xl font-bold text-[#3fb950]">4+</div>
+                <div className="text-2xl font-bold text-[#3fb950]">50+</div>
                 <div className="mt-1 text-xs uppercase tracking-wider text-white/50">
                   PRs Merged
                 </div>
@@ -118,6 +119,23 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-8"
           >
+
+            {/* <ProfileCard 
+             name="Tejpal Aradhya C P"
+  title="Software Engineer"
+  handle="aradhyacp"
+  status="Level Up"
+  contactText="Contact Me"
+  avatarUrl="/IMG_5648_edit2bgrm.png"
+  showUserInfo
+  enableTilt={true}
+  enableMobileTilt={false}
+  onContactClick={() => console.log('Contact clicked')}
+  behindGlowColor="rgba(125, 190, 255, 0.67)"
+  iconUrl="/terminal.png"
+  behindGlowEnabled
+  innerGradient="linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)"
+  /> */}
             {/* Interests Grid */}
             <div>
               <h3 className="mb-4 text-sm font-medium uppercase tracking-wider text-white/50">
