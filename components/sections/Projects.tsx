@@ -2,7 +2,6 @@
 
 import { motion } from "motion/react";
 import MacOSCard from "@/components/ui/MacOSCard";
-import { ProjectsDecoration } from "@/components/ui/SectionDecorations";
 import ShinyText from "../ShinyText";
 
 interface Project {
@@ -39,12 +38,30 @@ const projects: Project[] = [
     github: "https://github.com/aradhyacp/Leak-Disclosure",
   },
   {
-    name:"SecFlow",
-    tagline:"Automated threat analysis pipeline",
-    description: "AI-driven automated threat analysis pipeline that routes files, URLs, IPs, domains, or images through specialized security analyzers and generates professional PWNDoc reports with integrated YARA and Sigma rule.",
-    tech: ["Python"],
-    stats:[{label:"Features",value:"Auto"}],
-    github:"https://github.com/aradhyacp/SecFlow"
+    name: "SecFlow",
+    tagline: "Automated multi-pass threat analysis pipeline",
+    description:
+      "AI-assisted security pipeline that analyzes files, URLs, IPs, domains, and images through specialized microservices. Chains analysis across multiple passes by extracting IOCs, downloading payloads, and pivoting between analyzers. Generates full DFIR-style reports with YARA rules, SIGMA rules, and MITRE ATT&CK mappings.",
+    tech: [
+      "Python",
+      "Flask",
+      "Docker Compose",
+      "React",
+      "Groq (Qwen3, LLaMA 3.3)",
+      // "VirusTotal API",
+      // "Ghidra",
+      // "binwalk",
+      // "oletools",
+      // "OSINT APIs"
+    ],
+    stats: [
+      { label: "Architecture", value: "6 Microservices + Multi-pass" },
+      // { label: "Analyzers", value: "5 (Malware, Steg, Recon, Web, Macro)" },
+      // { label: "Pipeline", value: "Multi-pass (3–5 iterations)" },
+      // { label: "Output", value: "YARA + SIGMA + MITRE + PDF Report" }
+      { label: "GitHub Stars", value: "10" },
+    ],
+    github: "https://github.com/aradhyacp/SecFlow",
   },
   {
     name: "AI PR Review Bot",
@@ -54,7 +71,7 @@ const projects: Project[] = [
     tech: ["GitHub Actions", "Google Gemini", "TypeScript"],
     stats: [{ label: "Reviews", value: "Code quality, security, bugs" }],
     github: "https://github.com/aradhyacp/ai-pr-review-bot",
-  }
+  },
 ];
 
 const GithubIcon = () => (
@@ -83,7 +100,6 @@ export default function Projects() {
   return (
     <section className="relative z-10 min-h-screen px-6 py-24 md:px-12 lg:px-24">
       <div className="mx-auto max-w-6xl">
-
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -98,19 +114,19 @@ export default function Projects() {
           {/* <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
             Proof of Work
           </h2> */}
-          <ShinyText 
-          text="Proof of Work"
-  speed={2}
-  delay={0}
-  color="#b5b5b5"
-  shineColor="#ffffff"
-  spread={120}
-  direction="left"
-  yoyo={false}
-  pauseOnHover={false}
-  disabled={false} 
-  className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl"
-  />
+          <ShinyText
+            text="Proof of Work"
+            speed={2}
+            delay={0}
+            color="#b5b5b5"
+            shineColor="#ffffff"
+            spread={120}
+            direction="left"
+            yoyo={false}
+            pauseOnHover={false}
+            disabled={false}
+            className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl"
+          />
           <p className="mt-4 max-w-2xl text-lg text-white/60">
             Real projects with real users. Built from curiosity, not for a
             resume.
@@ -160,8 +176,26 @@ export default function Projects() {
                   <div className="mb-5 flex flex-wrap gap-6 border-t border-white/10 pt-5">
                     {project.stats.map((stat) => (
                       <div key={stat.label}>
-                        <div className="text-lg font-semibold text-white">
-                          {stat.value}
+                        <div className="text-lg font-semibold text-white flex items-center gap-1">
+                          {stat.label === "GitHub Stars" ? (
+                            <>
+                              {stat.value}
+                              <svg
+                                aria-hidden="true"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                version="1.1"
+                                width="16"
+                                data-view-component="true"
+                                className="text-white"
+                                fill="currentColor"
+                              >
+                                <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
+                              </svg>
+                            </>
+                          ) : (
+                            stat.value
+                          )}
                         </div>
                         <div className="text-xs text-white/40">
                           {stat.label}
