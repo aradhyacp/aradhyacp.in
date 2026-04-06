@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils";
-import { LucideCpu, LucideDatabase, LucidePanelsTopLeft, LucideServer, LucideTerminal, LucideWrench } from "lucide-react";
+import { LucideCpu, LucideDatabase, LucidePanelsTopLeft, LucideServer, LucideSquareTerminal, LucideTerminal, LucideWrench } from "lucide-react";
 
 interface TechCategory {
   id: string;
@@ -29,8 +29,6 @@ const techCategories: TechCategory[] = [
       "HTML5",
       "CSS3",
       "Tailwind CSS",
-      "React Native",
-      "Expo",
     ],
   },
   {
@@ -87,10 +85,8 @@ const techCategories: TechCategory[] = [
       "TypeScript",
       "JavaScript",
       "Python",
-      "Go",
       "Rust",
       "C++",
-      "Java",
       "SQL",
     ],
   },
@@ -121,7 +117,7 @@ export default function TechnicalArsenal({className}:TechArsenalProps) {
       <div className="space-y-6">
         {/* Icon */}
         <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 border border-white/10">
-          <svg
+          {/* <svg
             className="w-6 h-6 text-white/70"
             fill="none"
             stroke="currentColor"
@@ -133,7 +129,8 @@ export default function TechnicalArsenal({className}:TechArsenalProps) {
               strokeWidth={2}
               d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
             />
-          </svg>
+          </svg> */}
+          <LucideSquareTerminal className="text-gray-200 opacity-90"/>
         </div>
 
         {/* Title */}
