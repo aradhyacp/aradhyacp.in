@@ -39,6 +39,14 @@ const projects: Project[] = [
     github: "https://github.com/aradhyacp/Leak-Disclosure",
   },
   {
+    name:"SecFlow",
+    tagline:"Automated threat analysis pipeline",
+    description: "AI-driven automated threat analysis pipeline that routes files, URLs, IPs, domains, or images through specialized security analyzers and generates professional PWNDoc reports with integrated YARA and Sigma rule.",
+    tech: ["Python"],
+    stats:[{label:"Features",value:"Auto"}],
+    github:"https://github.com/aradhyacp/SecFlow"
+  },
+  {
     name: "AI PR Review Bot",
     tagline: "Automated code review",
     description:
@@ -46,15 +54,7 @@ const projects: Project[] = [
     tech: ["GitHub Actions", "Google Gemini", "TypeScript"],
     stats: [{ label: "Reviews", value: "Code quality, security, bugs" }],
     github: "https://github.com/aradhyacp/ai-pr-review-bot",
-  },
-  {
-    name: "AI README Generator",
-    tagline: "README.md in seconds",
-    description:
-      "Frontend-only AI tool to generate README files for your projects. Built with streaming UI for real-time output generation. Users provide their own API key to avoid cost issues.",
-    tech: ["Next.js", "Streaming UI", "OpenAI API"],
-    github: "https://github.com/aradhyacp/ai-readme-generator",
-  },
+  }
 ];
 
 const GithubIcon = () => (
@@ -95,11 +95,11 @@ export default function Projects() {
           <div className="mb-2 font-mono text-sm uppercase tracking-widest text-[#3fb950]">
             04 / Projects
           </div>
-          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
+          {/* <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
             Proof of Work
-          </h2>
+          </h2> */}
           <ShinyText 
-          text="Get In Touch"
+          text="Proof of Work"
   speed={2}
   delay={0}
   color="#b5b5b5"

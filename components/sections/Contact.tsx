@@ -91,9 +91,6 @@ export default function Contact() {
             scaleOnHover={1.05}
             showMobileWarning={false}
             displayOverlayContent
-            overlayContent={
-              <p className="bg-[#80808095] ">Kendrick Lamar - GNX</p>
-            }
           />
           <motion.p
             initial={{ opacity: 0, y: 20 }}
