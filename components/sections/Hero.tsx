@@ -142,7 +142,7 @@ export default function Hero() {
                 <div className="relative h-16 w-16 overflow-hidden rounded-full border-2 border-white/20 bg-white/10">
                   {profile?.avatar_url ? (
                     <img
-                      src={profile.avatar_url}
+                      src="/pfp.webp"
                       alt="Aradhya CP"
                       className="h-full w-full object-cover"
                     />
