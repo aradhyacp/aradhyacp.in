@@ -3,14 +3,15 @@
 import { motion } from "motion/react";
 import ShinyText from "@/components/ShinyText";
 import ProfileCard from "../ProfileCard"
+import { LucideBrainCircuit, LucideDollarSign, LucideGlobe, LucideMonitorCog, LucideShieldUser } from "lucide-react";
 
 const interests = [
-  { icon: "🤖", label: "AI Applications" },
-  { icon: "🛠️", label: "Developer Tools" },
-  { icon: "🔐", label: "Security/CTF" },
-  { icon: "🌐", label: "Open Source" },
-  { icon: "⚡", label: "Streaming UIs" },
-  { icon: "📦", label: "SaaS Products" },
+  { icon: <LucideGlobe height={20} width={20}/>, label: "Web Dev"},
+  { icon: <LucideBrainCircuit height={20} width={20}/>, label: "AI Applications" },
+  { icon: <LucideMonitorCog height={20} width={20}/>, label: "Developer Tools" },
+  { icon: <LucideShieldUser height={20} width={20}/>, label: "Security/CTF" },
+  { icon: <LucideGlobe height={20} width={20}/>, label: "Open Source" },
+  { icon: <LucideDollarSign height={20} width={20}/>, label: "SaaS Products" },
 ];
 
 export default function About() {
@@ -138,7 +139,7 @@ export default function About() {
   /> */}
             {/* Interests Grid */}
             <div>
-              <h3 className="mb-4 text-sm font-medium uppercase tracking-wider text-white/50">
+              <h3 className="mb-4 text-lg font-medium uppercase tracking-wider text-white">
                 What I&apos;m Into
               </h3>
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -162,7 +163,7 @@ export default function About() {
 
             {/* Values */}
             <div>
-              <h3 className="mb-4 text-sm font-medium uppercase tracking-wider text-white/50">
+              <h3 className="mb-4 text-lg font-medium uppercase tracking-wider text-white">
                 How I Work
               </h3>
               <ul className="space-y-3 text-white/70">
