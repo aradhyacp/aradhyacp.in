@@ -39,7 +39,7 @@ const socialLinks: SocialLink[] = [
   },
   {
     name: "Email",
-    url: "mailto:cparadhya@proton.me",
+    url: "mailto:boss@aradhyacp.in",
     icon: <EmailIcon />,
   },
 ];
