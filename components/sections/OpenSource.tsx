@@ -39,7 +39,7 @@ const contributions: Contribution[] = [
   {
     repo: "AperiSolve",
     org: "Zeecka",
-    stars: "791",
+    stars: "800+",
     role: "Maintainer",
     description:
       "Steganalysis web platform used in CTF competitions and security research for analyzing steganography in images.",
@@ -54,7 +54,7 @@ const contributions: Contribution[] = [
   {
     repo: "pyinstxtractor-ng",
     org: "pyinstxtractor",
-    stars: "200+",
+    stars: "700+",
     role: "Contributor",
     description:
       "Extracts PyInstaller-packaged Python executables. Used in security research and CTF challenges.",
