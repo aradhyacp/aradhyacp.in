@@ -101,7 +101,7 @@ export default function Contact() {
           >
             I&apos;m always open to new opportunities, collaborations, and
             interesting projects. Whether you want to discuss tech, open source,
-            or just say hi — feel free to reach out.
+            or just say hi, feel free to reach out.
           </motion.p>
         </div>
 
@@ -114,12 +114,12 @@ export default function Contact() {
           className="mb-12"
         >
           <a
-            href="mailto:cparadhya@proton.me"
+            href="mailto:boss@aradhyacp.in"
             className="group inline-flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-8 py-4 transition-all hover:border-white/20 hover:bg-white/[0.06]"
           >
             <EmailIcon />
             <span className="text-lg font-medium text-white/80 group-hover:text-white">
-              cparadhya@proton.me
+              boss@aradhyacp.in
             </span>
           </a>
         </motion.div>
@@ -159,13 +159,12 @@ export default function Contact() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="border-t border-white/10 pt-8"
         >
-          <p className="text-sm text-white/40">
+          {/* <p className="text-sm text-white/40">
             Designed and built by{" "}
             <span className="text-white/60">Aradhya CP</span>
-          </p>
-          <p className="mt-2 text-xs text-white/30">
-            {new Date().getFullYear()} — Built with Next.js, Tailwind CSS, and
-            Motion
+          </p> */}
+          <p className="text-sm text-white/30">
+            © {new Date().getFullYear()} <span className="text-white/60">Aradhya CP</span>  All rights reserved.
           </p>
         </motion.div>
       </div>
