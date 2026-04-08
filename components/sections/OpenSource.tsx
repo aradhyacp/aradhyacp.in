@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import MacOSCard from "@/components/ui/MacOSCard";
-import { OpenSourceDecoration } from "@/components/ui/SectionDecorations";
+import MacOSCard from "@/components/ui/MacOSCard";;
 import ShinyText from "../ShinyText";
 import { LucideGitPullRequestArrow } from "lucide-react";
 
