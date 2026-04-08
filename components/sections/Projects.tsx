@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import MacOSCard from "@/components/ui/MacOSCard";
 import ShinyText from "../ShinyText";
+import { LucideMoveRight } from "lucide-react";
 
 interface Project {
   name: string;
@@ -232,6 +233,21 @@ export default function Projects() {
             </motion.div>
           ))}
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-12 flex justify-center"
+        >
+          <a
+            href="/projects"
+            className="group flex items-center gap-2 rounded-lg border border-white/20 bg-white px-6 py-3 text-sm font-semibold text-black transition-all hover:bg-white/90 hover:gap-3"
+          >
+            See All Projects
+            <LucideMoveRight className="transition-transform group-hover:translate-x-1" />
+          </a>
+        </motion.div>
       </div>
     </section>
   );
