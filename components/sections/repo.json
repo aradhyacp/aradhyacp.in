@@ -1,0 +1,186 @@
+[
+  {
+    "name": "Ai-Code-Summarizer",
+    "full_name": "aradhyacp/Ai-Code-Summarizer",
+    "html_url": "https://github.com/aradhyacp/Ai-Code-Summarizer",
+    "description": "AI-powered code summarizer built with React and Node.js using Google's Gemini API. Supports multiple languages, model selection, and provides detailed token usage and response time.",
+    "stargazers_count": 1,
+    "language": "JavaScript"
+  },
+  {
+    "name": "ai-pr-review-bot",
+    "full_name": "aradhyacp/ai-pr-review-bot",
+    "html_url": "https://github.com/aradhyacp/ai-pr-review-bot",
+    "description": "AI PR Review Bot: Automatically reviews GitHub pull requests using Google Gemini AI, analyzes code quality, maintainability, and potential issues, and posts actionable suggestions directly on the PR.",
+    "stargazers_count": 2,
+    "language": "JavaScript"
+  },
+  {
+    "name": "ai-readme-generator",
+    "full_name": "aradhyacp/ai-readme-generator",
+    "html_url": "https://github.com/aradhyacp/ai-readme-generator",
+    "description": "Frontend-only AI-powered README generator built with Next.js and Streamdown. Generate, preview, copy, and download README files instantly.",
+    "stargazers_count": 0,
+    "language": "TypeScript"
+  },
+  {
+    "name": "all-sem-sgpa",
+    "full_name": "aradhyacp/all-sem-sgpa",
+    "html_url": "https://github.com/aradhyacp/all-sem-sgpa",
+    "description": "This repository contains all of my end-semester result sheets.",
+    "stargazers_count": 0,
+    "language": null
+  },
+  {
+    "name": "AperiSolve",
+    "full_name": "aradhyacp/AperiSolve",
+    "html_url": "https://github.com/aradhyacp/AperiSolve",
+    "description": "Steganalysis web platform",
+    "stargazers_count": 0,
+    "language": "Python"
+  },
+  {
+    "name": "clerk-auth-custom-flow",
+    "full_name": "aradhyacp/clerk-auth-custom-flow",
+    "html_url": "https://github.com/aradhyacp/clerk-auth-custom-flow",
+    "description": "A full-stack authentication starter kit of Clerk Authentication with a custom flow and ui made with Node.js and Supabase.",
+    "stargazers_count": 0,
+    "language": "JavaScript"
+  },
+  {
+    "name": "FitHub",
+    "full_name": "aradhyacp/FitHub",
+    "html_url": "https://github.com/aradhyacp/FitHub",
+    "description": null,
+    "stargazers_count": 0,
+    "language": "TypeScript"
+  },
+  {
+    "name": "github-profile-scraper",
+    "full_name": "aradhyacp/github-profile-scraper",
+    "html_url": "https://github.com/aradhyacp/github-profile-scraper",
+    "description": "A clean and modern GitHub profile viewer that fetches and displays user info and repositories using the GitHub API.",
+    "stargazers_count": 0,
+    "language": "JavaScript"
+  },
+  {
+    "name": "Leak-Disclosure",
+    "full_name": "aradhyacp/Leak-Disclosure",
+    "html_url": "https://github.com/aradhyacp/Leak-Disclosure",
+    "description": "Leak-Disclosure is a professional-grade full-stack SaaS security platform to identify compromised in data breaches. By providing real-time monitoring, automated email alerts, and a comprehensive search engine",
+    "stargazers_count": 1,
+    "language": "JavaScript"
+  },
+  {
+    "name": "LifeGrid",
+    "full_name": "aradhyacp/LifeGrid",
+    "html_url": "https://github.com/aradhyacp/LifeGrid",
+    "description": "A wallpaper engine that turns life, year, and goal data into beautiful SVG/PNG wallpapers - built with Cloudflare Pages + Workers + resvg-wasm.",
+    "stargazers_count": 44,
+    "language": "JavaScript"
+  },
+  {
+    "name": "LinkShrink",
+    "full_name": "aradhyacp/LinkShrink",
+    "html_url": "https://github.com/aradhyacp/LinkShrink",
+    "description": "A sleek full-stack URL shortener built with React, Express, and Supabase. Supports custom codes, QR generation, and click tracking — complete with rate limiting and validation.",
+    "stargazers_count": 1,
+    "language": "JavaScript"
+  },
+  {
+    "name": "Mnist-NumberPrediction",
+    "full_name": "aradhyacp/Mnist-NumberPrediction",
+    "html_url": "https://github.com/aradhyacp/Mnist-NumberPrediction",
+    "description": "A simple and interactive web application that predicts handwritten digits (0-9) using the MNIST dataset. Built with React, Vite, and TensorFlow.js",
+    "stargazers_count": 0,
+    "language": "JavaScript"
+  },
+  {
+    "name": "mytest",
+    "full_name": "aradhyacp/mytest",
+    "html_url": "https://github.com/aradhyacp/mytest",
+    "description": null,
+    "stargazers_count": 0,
+    "language": "Batchfile"
+  },
+  {
+    "name": "Page-Replacement-Visualizer",
+    "full_name": "aradhyacp/Page-Replacement-Visualizer",
+    "html_url": "https://github.com/aradhyacp/Page-Replacement-Visualizer",
+    "description": "A web-based tool designed to visualize and analyze different page replacement algorithms, including LRU (Least Recently Used), FIFO (First In First Out), Optimal and LFU (Least Frequently Used).",
+    "stargazers_count": 1,
+    "language": "TypeScript"
+  },
+  {
+    "name": "pyinstxtractor-ng",
+    "full_name": "aradhyacp/pyinstxtractor-ng",
+    "html_url": "https://github.com/aradhyacp/pyinstxtractor-ng",
+    "description": "PyInstaller Extractor Next Generation",
+    "stargazers_count": 0,
+    "language": "Python"
+  },
+  {
+    "name": "react-trials",
+    "full_name": "aradhyacp/react-trials",
+    "html_url": "https://github.com/aradhyacp/react-trials",
+    "description": null,
+    "stargazers_count": 0,
+    "language": "JavaScript"
+  },
+  {
+    "name": "result-scraper",
+    "full_name": "aradhyacp/result-scraper",
+    "html_url": "https://github.com/aradhyacp/result-scraper",
+    "description": "DSCE Endsem Results Scraper Automatically fetches student results from the DSCE portal, organizes them by branch, and saves them as CSV.",
+    "stargazers_count": 1,
+    "language": "Python"
+  },
+  {
+    "name": "SecFlow",
+    "full_name": "aradhyacp/SecFlow",
+    "html_url": "https://github.com/aradhyacp/SecFlow",
+    "description": "AI-driven automated threat analysis pipeline that routes files, URLs, IPs, domains, or images through specialized security analyzers and generates professional PWNDoc reports with integrated YARA and Sigma rule.",
+    "stargazers_count": 10,
+    "language": "Python"
+  },
+  {
+    "name": "Secure-wipe",
+    "full_name": "aradhyacp/Secure-wipe",
+    "html_url": "https://github.com/aradhyacp/Secure-wipe",
+    "description": null,
+    "stargazers_count": 0,
+    "language": "JavaScript"
+  },
+  {
+    "name": "Secure-Wipe-Desktop",
+    "full_name": "aradhyacp/Secure-Wipe-Desktop",
+    "html_url": "https://github.com/aradhyacp/Secure-Wipe-Desktop",
+    "description": null,
+    "stargazers_count": 0,
+    "language": "Python"
+  },
+  {
+    "name": "Stake-Mines",
+    "full_name": "aradhyacp/Stake-Mines",
+    "html_url": "https://github.com/aradhyacp/Stake-Mines",
+    "description": null,
+    "stargazers_count": 0,
+    "language": "JavaScript"
+  },
+  {
+    "name": "streamdown",
+    "full_name": "aradhyacp/streamdown",
+    "html_url": "https://github.com/aradhyacp/streamdown",
+    "description": "A drop-in replacement for react-markdown, designed for AI-powered streaming.",
+    "stargazers_count": 0,
+    "language": "TypeScript"
+  },
+  {
+    "name": "Wifi-dos",
+    "full_name": "aradhyacp/Wifi-dos",
+    "html_url": "https://github.com/aradhyacp/Wifi-dos",
+    "description": "WiFi-DoS is a Python-based Wi-Fi deauthentication tool for authorized security testing. It automates scanning and sending deauth packets using the aircrack-ng suite",
+    "stargazers_count": 6,
+    "language": "Python"
+  }
+]
