@@ -4,22 +4,26 @@ import { motion } from "motion/react";
 import MacOSCard from "@/components/ui/MacOSCard";
 import { OpenSourceDecoration } from "@/components/ui/SectionDecorations";
 import ShinyText from "../ShinyText";
+import { LucideGitPullRequestArrow } from "lucide-react";
 
 interface Contribution {
   repo: string;
   org: string;
+  org_logo?: string;
   stars: string;
   role: string;
   description: string;
   prs: string[];
   url: string;
+  pr_url: string;
 }
 
 const contributions: Contribution[] = [
   {
     repo: "streamdown",
-    org: "vercel",
-    stars: "4,700+",
+    org: "Vercel",
+    org_logo: "/vercel.svg",
+    stars: "4,900+",
     role: "Contributor",
     description:
       "Drop-in replacement for react-markdown designed for AI-powered streaming. Powers Vercel's AI Elements.",
@@ -30,6 +34,7 @@ const contributions: Contribution[] = [
       "Fixed Tailwind CSS purging for plugin packages",
     ],
     url: "https://github.com/vercel/streamdown",
+    pr_url: "https://github.com/vercel/streamdown/issues?q=is%3Apr%20author%3Aaradhyacp",
   },
   {
     repo: "AperiSolve",
@@ -44,6 +49,7 @@ const contributions: Contribution[] = [
       "Multiple functionality and reliability improvements",
     ],
     url: "https://github.com/Zeecka/AperiSolve",
+    pr_url: "http://github.com/Zeecka/AperiSolve/issues?q=is%3Apr%20author%3Aaradhyacp",
   },
   {
     repo: "pyinstxtractor-ng",
@@ -57,6 +63,7 @@ const contributions: Contribution[] = [
       "Improved zlib decompression handling for complex binaries",
     ],
     url: "https://github.com/pyinstxtractor/pyinstxtractor-ng",
+    pr_url: "https://github.com/pyinstxtractor/pyinstxtractor-ng/issues?q=is%3Apr+author%3Aaradhyacp",
   },
 ];
 
@@ -130,8 +137,12 @@ export default function OpenSource() {
                     <h3 className="text-lg font-semibold text-white">
                       {contrib.repo}
                     </h3>
-                    <div className="mt-1 text-sm text-white/50">
-                      {contrib.org}
+                    <div className="mt-1 text-sm text-white/50 flex items-center gap-2">
+                      {contrib.org_logo && (<img
+    src={contrib.org_logo}
+    alt={contrib.org}
+    className="h-3 w-3"
+  />)} {contrib.org} 
                     </div>
                   </div>
                   <span
@@ -175,15 +186,27 @@ export default function OpenSource() {
                 </div>
 
                 {/* Link */}
-                <a
-                  href={contrib.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex w-full items-center justify-center gap-2 rounded-lg border border-white/10 bg-white/5 py-2.5 text-sm text-white/70 transition-all hover:border-white/20 hover:bg-white/10 hover:text-white"
-                >
-                  <GithubIcon />
-                  View Repository
-                </a>
+                <div className="flex gap-2">
+  <a
+    href={contrib.url}
+    target="_blank"
+    rel="noreferrer"
+    className="flex-1 flex items-center justify-center gap-2 rounded-lg border border-white/10 bg-white/5 py-2.5 text-sm text-white/70 transition-all hover:border-white/20 hover:bg-white/10 hover:text-white"
+  >
+    <GithubIcon />
+    View Repository
+  </a>
+
+  <a
+    href={contrib.pr_url}
+    target="_blank"
+    rel="noreferrer"
+    className="flex-1 flex items-center justify-center gap-2 rounded-lg border border-white/10 bg-white/5 py-2.5 text-sm text-white/70 transition-all hover:border-white/20 hover:bg-white/10 hover:text-white"
+  >
+    <LucideGitPullRequestArrow className="h-4 w-4" />
+    View My PRs
+  </a>
+</div>
               </MacOSCard>
             </motion.div>
           ))}
