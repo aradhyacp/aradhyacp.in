@@ -47,14 +47,14 @@ const socialLinks = [
 export default function Contact() {
   return (
     <section className="relative z-10 min-h-[70vh] px-6 py-24 md:px-12 lg:px-24">
-      <div className="mx-auto max-w-4xl text-center">
+      <div className="mx-auto max-w-6xl">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-16"
         >
           <div className="mb-2 font-mono text-sm uppercase tracking-widest text-[#3fb950]">
             05 / Contact
@@ -77,8 +77,10 @@ export default function Contact() {
           />
         </motion.div>
 
-        {/* Message */}
-        <div className="flex mb-6 items-center">
+        {/* Centered Content Container */}
+        <div className="text-center">
+          {/* Message */}
+          <div className="flex mb-6 items-center">
           <TiltedCard
             imageSrc={"https://avatars.githubusercontent.com/u/135510032?v=4"}
             showTooltip={false}
@@ -167,6 +169,7 @@ export default function Contact() {
             © {new Date().getFullYear()} <span className="text-white/60">Aradhya CP</span>  All rights reserved.
           </p>
         </motion.div>
+        </div>
       </div>
     </section>
   );
