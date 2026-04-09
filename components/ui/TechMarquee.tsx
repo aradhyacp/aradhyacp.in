@@ -34,10 +34,10 @@ export default function TechMarquee({ className, reverse = false }: TechMarqueeP
 
   return (
     <div className={cn("relative overflow-hidden py-8", className)}>
-      <div className="vignette-x">
+      <div className="vignette-x overflow-hidden">
         <div
           className={cn(
-            "flex gap-16 w-max",
+            "flex gap-8 md:gap-16 w-max",
             reverse ? "animate-marquee-reverse" : "animate-marquee"
           )}
           style={{ animationDuration: "40s" }}
