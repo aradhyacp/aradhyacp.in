@@ -131,12 +131,12 @@ export default function OpenSource() {
                 className="h-full"
               >
                 {/* Header */}
-                <div className="mb-4 flex items-start justify-between">
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">
+                <div className="mb-4 flex items-start justify-between gap-3">
+                  <div className="min-w-0">
+                    <h3 className="break-words text-lg font-semibold text-white">
                       {contrib.repo}
                     </h3>
-                    <div className="mt-1 text-sm text-white/50 flex items-center gap-2">
+                    <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-white/50">
                       {contrib.org_logo && (<img
     src={contrib.org_logo}
     alt={contrib.org}
@@ -162,7 +162,7 @@ export default function OpenSource() {
                 </div>
 
                 {/* Description */}
-                <p className="mb-4 text-sm leading-relaxed text-white/60">
+                <p className="mb-4 break-words text-sm leading-relaxed text-white/60">
                   {contrib.description}
                 </p>
 
@@ -185,7 +185,7 @@ export default function OpenSource() {
                 </div>
 
                 {/* Link */}
-                <div className="flex gap-2">
+                <div className="flex flex-col gap-2 sm:flex-row">
   <a
     href={contrib.url}
     target="_blank"
