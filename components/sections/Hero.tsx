@@ -73,7 +73,7 @@ export default function Hero() {
           {/* Name and Age */}
           <div className="mb-4 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
             <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl">
-              Aradhya CP
+              Tejpal Aradhya CP
             </h1>
             <span className="rounded-full border border-white/20 bg-white/5 px-3 py-1 text-sm font-medium text-white/60">
               {age}
