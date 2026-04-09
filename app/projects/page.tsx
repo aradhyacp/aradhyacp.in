@@ -69,17 +69,45 @@ export default function ProjectsPage() {
     return text.length > maxLength ? `${text.slice(0, maxLength)}...` : text;
   };
 
-  const getLanguageColor = (language: string | null) => {
-    const colors: Record<string, string> = {
-      JavaScript: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",
-      TypeScript: "bg-blue-500/20 text-blue-400 border-blue-500/30",
-      Python: "bg-green-500/20 text-green-400 border-green-500/30",
-      Java: "bg-orange-500/20 text-orange-400 border-orange-500/30",
-      Go: "bg-cyan-500/20 text-cyan-400 border-cyan-500/30",
-      Rust: "bg-red-500/20 text-red-400 border-red-500/30",
-    };
-    return colors[language || ""] || "bg-white/10 text-white/60 border-white/20";
+const getLanguageColor = (language: string | null) => {
+  const colors: Record<string, string> = {
+    JavaScript: "text-yellow-400",
+    TypeScript: "text-blue-500",
+    Python: "text-blue-400",
+    Java: "text-orange-500",
+    Go: "text-cyan-400",
+    Rust: "text-orange-300",
+    C: "text-gray-400",
+    "C++": "text-pink-400",
+    "C#": "text-green-500",
+    HTML: "text-orange-600",
+    CSS: "text-purple-500",
+    Shell: "text-green-400",
+    Bash: "text-green-400",
+    PHP: "text-indigo-400",
+    Ruby: "text-red-500",
+    Swift: "text-orange-400",
+    Kotlin: "text-purple-400",
+    Dart: "text-teal-400",
+    Scala: "text-red-600",
+    ObjectiveC: "text-blue-400",
+    Haskell: "text-purple-600",
+    Elixir: "text-purple-500",
+    Lua: "text-blue-700",
+    Groovy: "text-sky-500",
+    PowerShell: "text-blue-600",
+    Dockerfile: "text-blue-300",
+    Makefile: "text-green-600",
+    JSON: "text-gray-300",
+    YAML: "text-red-500",
+    Markdown: "text-blue-300",
+    Vue: "text-green-500",
+    Svelte: "text-orange-500",
+    "Jupyter Notebook": "text-orange-400",
   };
+
+  return colors[language || ""] || "text-gray-400"; // fallback
+};
 
   return (
     <div className="relative min-h-screen bg-black text-white">
@@ -251,15 +279,19 @@ export default function ProjectsPage() {
                     {/* Language Badge */}
                     <div className="col-span-6 md:col-span-2">
                       {repo.language ? (
-                        <span
-                          className={`inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-medium ${getLanguageColor(
-                            repo.language
-                          )}`}
-                        >
+                        // <span
+                        //   className={`inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-medium ${getLanguageColor(
+                        //     repo.language
+                        //   )}`}
+                        // >
+                        <span className="inline-flex items-center px-2.5 py-1 text-xs font-medium">
+                          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" className={`mr-2 ${getLanguageColor(repo.language)}`}>
+    <path d="M8 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z" fill="currentColor"></path>
+</svg>
                           {repo.language}
                         </span>
                       ) : (
-                        <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs font-medium text-white/40">
+                        <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs font-medium text-white/40 ml-2">
                           N/A
                         </span>
                       )}
