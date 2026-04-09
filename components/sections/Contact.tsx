@@ -5,28 +5,37 @@ import ShinyText from "../ShinyText";
 import TiltedCard from "../TiltedCard";
 
 const GithubIcon = () => (
-  <svg viewBox="0 0 24 24" className="h-6 w-6 fill-current">
+  <svg
+    aria-label="Github Icon"
+    className="h-6 w-6 fill-current"
+    viewBox="0 0 24 24"
+  >
     <path d="M12 2C6.477 2 2 6.484 2 12.02c0 4.428 2.865 8.19 6.839 9.515.5.092.682-.218.682-.484 0-.236-.008-.866-.013-1.7-2.782.605-3.369-1.342-3.369-1.342-.455-1.158-1.11-1.467-1.11-1.467-.908-.62.069-.608.069-.608 1.004.07 1.532 1.033 1.532 1.033.892 1.53 2.341 1.088 2.91.832.09-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.952 0-1.094.39-1.988 1.03-2.688-.103-.253-.446-1.27.098-2.646 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.506.338c1.909-1.296 2.748-1.026 2.748-1.026.546 1.376.203 2.393.1 2.646.64.7 1.03 1.594 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.31.678.92.678 1.855 0 1.338-.012 2.415-.012 2.744 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.02C22 6.484 17.523 2 12 2Z" />
   </svg>
 );
 
 const LinkedInIcon = () => (
-  <svg viewBox="0 0 24 24" className="h-6 w-6 fill-current">
+  <svg
+    aria-label="LinkedIn Icon"
+    className="h-6 w-6 fill-current"
+    viewBox="0 0 24 24"
+  >
     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
   </svg>
 );
 
 const EmailIcon = () => (
   <svg
-    viewBox="0 0 24 24"
+    aria-label="Email Icon"
     className="h-6 w-6"
     fill="none"
     stroke="currentColor"
-    strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
   >
-    <rect x="2" y="4" width="20" height="16" rx="2" />
+    <rect height="16" rx="2" width="20" x="2" y="4" />
     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
   </svg>
 );
@@ -50,30 +59,30 @@ export default function Contact() {
       <div className="mx-auto max-w-6xl">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
           className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-100px" }}
+          whileInView={{ opacity: 1, y: 0 }}
         >
-          <div className="mb-2 font-mono text-sm uppercase tracking-widest text-[#3fb950]">
+          <div className="mb-2 font-mono text-[#3fb950] text-sm uppercase tracking-widest">
             05 / Contact
           </div>
           {/* <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
             Get In Touch
           </h2> */}
           <ShinyText
-            text="Get In Touch"
-            speed={2}
-            delay={0}
+            className="font-semibold text-3xl text-white tracking-tight sm:text-4xl md:text-5xl"
             color="#b5b5b5"
-            shineColor="#ffffff"
-            spread={120}
+            delay={0}
             direction="left"
-            yoyo={false}
-            pauseOnHover={false}
             disabled={false}
-            className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl"
+            pauseOnHover={false}
+            shineColor="#ffffff"
+            speed={2}
+            spread={120}
+            text="Get In Touch"
+            yoyo={false}
           />
         </motion.div>
 
@@ -81,11 +90,13 @@ export default function Contact() {
         <div className="text-center">
           {/* Message */}
           <div className="mb-6 flex flex-col items-center gap-6 lg:flex-row lg:items-center">
-            <div className="w-full max-w-[250px] sm:max-w-[300px] flex-shrink-0">
+            <div className="w-full max-w-[250px] flex-shrink-0 sm:max-w-[300px]">
               <TiltedCard
-                imageSrc={"https://avatars.githubusercontent.com/u/135510032?v=4"}
-                showTooltip={false}
                 captionText="Kendrick Lamar - GNX"
+                displayOverlayContent
+                imageSrc={
+                  "https://avatars.githubusercontent.com/u/135510032?v=4"
+                }
                 // containerHeight="250px"
                 // containerWidth="100%"
                 // imageHeight="250px"
@@ -93,36 +104,36 @@ export default function Contact() {
                 rotateAmplitude={12}
                 scaleOnHover={1.05}
                 showMobileWarning={false}
-                displayOverlayContent
+                showTooltip={false}
               />
             </div>
             <motion.p
+              className="mx-auto mb-12 max-w-2xl text-base text-white/60 leading-relaxed sm:text-lg"
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="mx-auto mb-12 max-w-2xl text-base leading-relaxed text-white/60 sm:text-lg"
+              viewport={{ once: true, margin: "-100px" }}
+              whileInView={{ opacity: 1, y: 0 }}
             >
               I&apos;m always open to new opportunities, collaborations, and
-              interesting projects. Whether you want to discuss tech, open source,
-              or just say hi, feel free to reach out.
+              interesting projects. Whether you want to discuss tech, open
+              source, or just say hi, feel free to reach out.
             </motion.p>
           </div>
 
           {/* Email */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true, margin: "-100px" }}
+            whileInView={{ opacity: 1, y: 0 }}
           >
             <a
-              href="mailto:boss@aradhyacp.in"
               className="group inline-flex w-full max-w-sm items-center justify-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-6 py-4 transition-all hover:border-white/20 hover:bg-white/[0.06] sm:w-auto sm:max-w-none sm:px-8"
+              href="mailto:boss@aradhyacp.in"
             >
               <EmailIcon />
-              <span className="text-base font-medium text-white/80 group-hover:text-white sm:text-lg break-all">
+              <span className="break-all font-medium text-base text-white/80 group-hover:text-white sm:text-lg">
                 boss@aradhyacp.in
               </span>
             </a>
@@ -130,24 +141,24 @@ export default function Contact() {
 
           {/* Social Links */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.3 }}
             className="mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true, margin: "-100px" }}
+            whileInView={{ opacity: 1, y: 0 }}
           >
-            <div className="mb-4 text-sm uppercase tracking-wider text-white/40">
+            <div className="mb-4 text-sm text-white/40 uppercase tracking-wider">
               Find me online
             </div>
             <div className="flex justify-center gap-4">
               {socialLinks.map((link) => (
                 <a
-                  key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-white/60 transition-all hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
                   aria-label={link.name}
+                  className="flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-white/60 transition-all hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
+                  href={link.url}
+                  key={link.name}
+                  rel="noreferrer"
+                  target="_blank"
                 >
                   {link.icon}
                 </a>
@@ -157,18 +168,20 @@ export default function Contact() {
 
           {/* Footer */}
           <motion.div
+            className="border-white/10 border-t pt-8"
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="border-t border-white/10 pt-8"
+            viewport={{ once: true }}
+            whileInView={{ opacity: 1 }}
           >
             {/* <p className="text-sm text-white/40">
             Designed and built by{" "}
             <span className="text-white/60">Aradhya CP</span>
           </p> */}
             <p className="text-sm text-white/30">
-              © {new Date().getFullYear()} <span className="text-white/60">Aradhya CP</span>  All rights reserved.
+              © {new Date().getFullYear()}{" "}
+              <span className="text-white/60">Aradhya CP</span> All rights
+              reserved.
             </p>
           </motion.div>
         </div>
