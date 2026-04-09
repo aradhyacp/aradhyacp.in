@@ -61,8 +61,8 @@ export default function Hero() {
   const age = new Date().getFullYear() - 2005;
 
   return (
-    <section className="relative z-10 flex min-h-screen w-full items-center justify-center px-6 py-20">
-      <div className="flex w-full max-w-6xl flex-col items-center gap-16 lg:flex-row lg:items-center lg:justify-between">
+    <section className="relative z-10 flex min-h-screen w-full items-center justify-center px-6 py-20 md:px-12 lg:px-24">
+      <div className="flex w-full max-w-6xl flex-col items-center gap-12 sm:gap-16 lg:flex-row lg:items-center lg:justify-between">
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -71,7 +71,7 @@ export default function Hero() {
           className="flex flex-col items-center text-center lg:items-start lg:text-left"
         >
           {/* Name and Age */}
-          <div className="mb-4 flex items-center gap-3">
+          <div className="mb-4 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
             <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl">
               Aradhya CP
             </h1>
@@ -103,7 +103,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="mb-8 max-w-lg text-lg leading-relaxed text-white/60"
+            className="mb-8 max-w-lg text-base leading-relaxed text-white/60 sm:text-lg"
           >
             Self-taught engineer who builds things that bother him until they don&apos;t.
             Building AI-integrated apps and contributing to open source.
@@ -153,9 +153,9 @@ export default function Hero() {
                   )}
                   <div className="absolute inset-0 rounded-full ring-2 ring-[#238636]/50" />
                 </div>
-                <div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-lg font-semibold text-white">
+                <div className="min-w-0">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-base font-semibold text-white sm:text-lg break-all">
                       @{profile?.login ?? "aradhyacp"}
                     </span>
                     <span className="rounded border-2 border-[#8957e5] rounded-2xl px-1.5 py-0.5 text-[10px] font-bold uppercase text-[#ab7df8]">
@@ -211,12 +211,12 @@ export default function Hero() {
                 </svg>
                 Follow on GitHub
               </a>
-              <div className="flex gap-2 text-white/70 font-medium">
-                <span className="flex items-center gap-1"><LucideMail className="w-3.5 h-3.5 shrink-0"/>Mail: </span>
-                <a className="hover:underline" href="mailto:boss@aradhyacp.in">
-                  boss@aradhyacp.in
-                </a>
-              </div>
+                <div className="flex flex-wrap gap-2 text-white/70 font-medium">
+                  <span className="flex items-center gap-1"><LucideMail className="w-3.5 h-3.5 shrink-0"/>Mail: </span>
+                  <a className="break-all hover:underline" href="mailto:boss@aradhyacp.in">
+                    boss@aradhyacp.in
+                  </a>
+                </div>
             </div>
           </MacOSCard>
         </motion.div>
