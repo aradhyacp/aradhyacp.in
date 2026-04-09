@@ -137,7 +137,7 @@ export default function ProjectsPage() {
             className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
           >
             {/* Search */}
-            <div className="relative flex-1 max-w-md">
+            <div className="relative w-full flex-1 sm:max-w-md">
               <LucideSearch className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/40" />
               <input
                 type="text"
@@ -149,10 +149,10 @@ export default function ProjectsPage() {
             </div>
 
             {/* Sort Buttons */}
-            <div className="flex gap-2">
+            <div className="flex w-full flex-wrap gap-2 sm:w-auto sm:flex-nowrap">
               <button
                 onClick={() => toggleSort("stars")}
-                className={`flex items-center gap-2 rounded-lg border px-4 py-2.5 text-sm transition-all ${
+                className={`flex min-h-11 flex-1 items-center justify-center gap-2 rounded-lg border px-4 py-2.5 text-sm transition-all sm:min-h-0 sm:flex-none ${
                   sortBy === "stars"
                     ? "border-[#3fb950]/30 bg-[#3fb950]/10 text-[#3fb950]"
                     : "border-white/10 bg-white/5 text-white/70 hover:border-white/20 hover:bg-white/10"
@@ -164,7 +164,7 @@ export default function ProjectsPage() {
               </button>
               <button
                 onClick={() => toggleSort("name")}
-                className={`flex items-center gap-2 rounded-lg border px-4 py-2.5 text-sm transition-all ${
+                className={`flex min-h-11 flex-1 items-center justify-center gap-2 rounded-lg border px-4 py-2.5 text-sm transition-all sm:min-h-0 sm:flex-none ${
                   sortBy === "name"
                     ? "border-[#3fb950]/30 bg-[#3fb950]/10 text-[#3fb950]"
                     : "border-white/10 bg-white/5 text-white/70 hover:border-white/20 hover:bg-white/10"
@@ -223,7 +223,7 @@ export default function ProjectsPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.03 }}
-                  className="group rounded-lg border border-white/10 bg-white/[0.03] p-6 transition-all hover:border-white/20 hover:bg-white/[0.05]"
+                  className="group rounded-lg border border-white/10 bg-white/[0.03] p-4 transition-all hover:border-white/20 hover:bg-white/[0.05] sm:p-6"
                 >
                   <div className="grid gap-4 md:grid-cols-12 md:items-center">
                     {/* Project Name */}
@@ -238,12 +238,12 @@ export default function ProjectsPage() {
                         <span className="truncate">{repo.name}</span>
                         <LucideExternalLink className="h-3 w-3 flex-shrink-0 opacity-0 transition-opacity group-hover:opacity-100" />
                       </a>
-                      <div className="mt-1 text-xs text-white/40">{repo.full_name}</div>
+                      <div className="mt-1 break-all text-xs text-white/40">{repo.full_name}</div>
                     </div>
 
                     {/* Description */}
                     <div className="col-span-12 md:col-span-5">
-                      <p className="text-sm text-white/60" title={repo.description || ""}>
+                      <p className="break-words text-sm text-white/60" title={repo.description || ""}>
                         {repo.description}
                       </p>
                     </div>
