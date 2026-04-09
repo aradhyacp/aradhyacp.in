@@ -17,8 +17,8 @@ export default function Page() {
         <div className="absolute inset-0 z-0">
           <Floatinglines
             enabledWaves={["top", "middle", "bottom"]}
-            lineCount={[5,5,5]}
-            lineDistance={[5,5,5]}
+            lineCount={[5, 5, 5]}
+            lineDistance={[5, 5, 5]}
             bendRadius={5}
             bendStrength={-0.5}
             interactive={true}
@@ -30,7 +30,7 @@ export default function Page() {
       </section>
 
       {/* Rest of the site with gradient background + grid aesthetics */}
-      <div className="relative gradient-mesh noise-overlay">
+      <div className="relative gradient-mesh noise-overlay overflow-hidden">
         {/* Ambient glow spots - more vibrant */}
         <div className="glow-spot glow-spot-coral w-[500px] h-[500px] -top-[100px] -left-[100px]" />
         <div className="glow-spot glow-spot-lavender w-[600px] h-[600px] top-[15%] -right-[200px]" />

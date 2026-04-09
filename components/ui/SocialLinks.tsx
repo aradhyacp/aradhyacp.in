@@ -51,7 +51,7 @@ interface SocialLinksProps {
 
 export default function SocialLinks({ className, showLabels = false }: SocialLinksProps) {
   return (
-    <div className={cn("flex items-center gap-3", className)}>
+    <div className={cn("flex flex-wrap items-center justify-center gap-3 sm:justify-start", className)}>
       {socialLinks.map((link) => (
         <a
           key={link.name}

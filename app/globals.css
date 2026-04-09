@@ -92,10 +92,12 @@
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
   }
   html {
     @apply font-sans scroll-smooth;
     letter-spacing: -0.01em;
+    overflow-x: hidden;
   }
 }
 

@@ -156,7 +156,7 @@ export default function Projects() {
                 </div>
 
                 {/* Description */}
-                <p className="mb-5 text-sm leading-relaxed text-white/60">
+                <p className="mb-5 break-words text-sm leading-relaxed text-white/60">
                   {project.description}
                 </p>
 
@@ -174,7 +174,7 @@ export default function Projects() {
 
                 {/* Stats */}
                 {project.stats && (
-                  <div className="mb-5 flex flex-wrap gap-6 border-t border-white/10 pt-5">
+                   <div className="mb-5 flex flex-wrap gap-4 sm:gap-6 border-t border-white/10 pt-5">
                     {project.stats.map((stat) => (
                       <div key={stat.label}>
                         <div className="text-lg font-semibold text-white flex items-center gap-1">
@@ -207,10 +207,10 @@ export default function Projects() {
                 )}
 
                 {/* Links */}
-                <div className="flex gap-3">
-                  <a
-                    href={project.github}
-                    target="_blank"
+                 <div className="flex flex-col gap-3 sm:flex-row">
+                   <a
+                     href={project.github}
+                     target="_blank"
                     rel="noreferrer"
                     className="flex flex-1 items-center justify-center gap-2 rounded-lg border border-white/10 bg-white/5 py-2.5 text-sm text-white/70 transition-all hover:border-white/20 hover:bg-white/10 hover:text-white"
                   >

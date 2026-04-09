@@ -20,7 +20,7 @@ const techCategories: TechCategory[] = [
   {
     id: "frontend",
     label: "Frontend",
-    icon: <LucidePanelsTopLeft className="w-3.5 h-3.5 shrink-0 text-white/70"/>,
+    icon: <LucidePanelsTopLeft className="w-3.5 h-3.5 shrink-0 text-white/70" />,
     items: [
       "React",
       "Next.js",
@@ -50,7 +50,7 @@ const techCategories: TechCategory[] = [
   {
     id: "aiml",
     label: "AI / ML",
-    icon: <LucideCpu className="w-3.5 h-3.5 shrink-0 text-white/70"/>,
+    icon: <LucideCpu className="w-3.5 h-3.5 shrink-0 text-white/70" />,
     items: [
       "TensorFlow",
       "PyTorch",
@@ -65,7 +65,7 @@ const techCategories: TechCategory[] = [
   {
     id: "devops",
     label: "DevOps",
-    icon: <LucideWrench className="w-3.5 h-3.5 shrink-0 text-white/70"/>,
+    icon: <LucideWrench className="w-3.5 h-3.5 shrink-0 text-white/70" />,
     items: [
       "Docker",
       "Kubernetes",
@@ -80,7 +80,7 @@ const techCategories: TechCategory[] = [
   {
     id: "langs",
     label: "Langs",
-    icon: <LucideTerminal className="w-3.5 h-3.5 shrink-0 text-white/70"/>,
+    icon: <LucideTerminal className="w-3.5 h-3.5 shrink-0 text-white/70" />,
     items: [
       "TypeScript",
       "JavaScript",
@@ -93,7 +93,7 @@ const techCategories: TechCategory[] = [
   {
     id: "data",
     label: "Data",
-    icon: <LucideDatabase className="w-3.5 h-3.5 shrink-0 text-white/70"/>,
+    icon: <LucideDatabase className="w-3.5 h-3.5 shrink-0 text-white/70" />,
     items: [
       "PostgreSQL",
       "MongoDB",
@@ -106,13 +106,13 @@ const techCategories: TechCategory[] = [
   },
 ];
 
-export default function TechnicalArsenal({className}:TechArsenalProps) {
+export default function TechnicalArsenal({ className }: TechArsenalProps) {
   const [activeTab, setActiveTab] = useState("frontend");
 
   const activeCategory = techCategories.find((cat) => cat.id === activeTab);
 
   return (
-    <div className={cn("grid grid-cols-1 lg:grid-cols-[400px_1fr] gap-8 lg:gap-12",className)}>
+    <div className={cn("grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,400px)_minmax(0,1fr)] lg:gap-12", className)}>
       {/* Left Section */}
       <div className="space-y-6">
         {/* Icon */}
@@ -130,11 +130,11 @@ export default function TechnicalArsenal({className}:TechArsenalProps) {
               d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
             />
           </svg> */}
-          <LucideSquareTerminal className="text-gray-200 opacity-90"/>
+          <LucideSquareTerminal className="text-gray-200 opacity-90" />
         </div>
 
         {/* Title */}
-        <h3 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+        <h3 className="text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
           Technical<br />Arsenal
         </h3>
 
@@ -165,13 +165,13 @@ export default function TechnicalArsenal({className}:TechArsenalProps) {
       {/* Right Section */}
       <div className="space-y-6">
         {/* Tabs */}
-        <div className="flex flex-wrap items-center gap-6  px-4 pt-3 justify-around pb-0 rounded-lg border border-white/10 bg-white/[0.02] p-4 text-center">
+        <div className="flex flex-wrap items-center gap-6  px-4 pt-3 justify-around pb-0 rounded-lg border border-white/10 bg-white/[0.02] p-4 text-center sm:justify-around sm:gap-4 sm:px-4 sm:pb-0 sm:p-4">
           {techCategories.map((category) => (
             <button
               key={category.id}
               onClick={() => setActiveTab(category.id)}
               className={cn(
-                "relative pb-3 text-sm font-medium transition-all duration-300",
+                "relative pb-2 sm:pb-3 text-xs sm:text-sm font-medium transition-all duration-300",
                 activeTab === category.id
                   ? "text-white"
                   : "text-white/40 hover:text-white/70"
@@ -208,14 +208,14 @@ export default function TechnicalArsenal({className}:TechArsenalProps) {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.2, delay: index * 0.03 }}
-                className="group relative flex items-center justify-between px-4 py-3 rounded-lg bg-black/40 border border-white/5 hover:border-white/10 hover:bg-black/60 transition-all duration-200"
+                className="group relative flex min-w-0 items-center justify-between rounded-lg border border-white/5 bg-black/40 px-3 py-3 transition-all duration-200 hover:border-white/10 hover:bg-black/60 sm:px-4"
               >
                 {/* Number and Name */}
                 <div className="flex items-center gap-3">
                   <span className="text-xs font-mono text-white/30 w-6">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <span className="text-sm font-medium text-white/90">
+                  <span className="truncate text-sm font-medium text-white/90">
                     {tech}
                   </span>
                 </div>
