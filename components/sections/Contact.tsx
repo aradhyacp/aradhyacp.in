@@ -46,7 +46,7 @@ const socialLinks = [
 
 export default function Contact() {
   return (
-    <section className="relative z-10 min-h-[70vh] px-6 py-24 md:px-12 lg:px-24">
+    <section className="relative z-10 min-h-screen px-6 py-24 md:px-12 lg:px-24">
       <div className="mx-auto max-w-6xl">
         {/* Section Header */}
         <motion.div
@@ -80,95 +80,97 @@ export default function Contact() {
         {/* Centered Content Container */}
         <div className="text-center">
           {/* Message */}
-          <div className="flex mb-6 items-center">
-          <TiltedCard
-            imageSrc={"https://avatars.githubusercontent.com/u/135510032?v=4"}
-            showTooltip={false}
-            captionText="Kendrick Lamar - GNX"
-            // containerHeight="300px"
-            // containerWidth="300px"
-            // imageHeight="300px"
-            // imageWidth="300px"
-            rotateAmplitude={12}
-            scaleOnHover={1.05}
-            showMobileWarning={false}
-            displayOverlayContent
-          />
-          <motion.p
+          <div className="mb-6 flex flex-col items-center gap-6 lg:flex-row lg:items-center">
+            <div className="w-full max-w-[250px] sm:max-w-[300px] flex-shrink-0">
+              <TiltedCard
+                imageSrc={"https://avatars.githubusercontent.com/u/135510032?v=4"}
+                showTooltip={false}
+                captionText="Kendrick Lamar - GNX"
+                // containerHeight="250px"
+                // containerWidth="100%"
+                // imageHeight="250px"
+                // imageWidth="250px"
+                rotateAmplitude={12}
+                scaleOnHover={1.05}
+                showMobileWarning={false}
+                displayOverlayContent
+              />
+            </div>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="mx-auto mb-12 max-w-2xl text-base leading-relaxed text-white/60 sm:text-lg"
+            >
+              I&apos;m always open to new opportunities, collaborations, and
+              interesting projects. Whether you want to discuss tech, open source,
+              or just say hi, feel free to reach out.
+            </motion.p>
+          </div>
+
+          {/* Email */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-white/60"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-12"
           >
-            I&apos;m always open to new opportunities, collaborations, and
-            interesting projects. Whether you want to discuss tech, open source,
-            or just say hi, feel free to reach out.
-          </motion.p>
-        </div>
+            <a
+              href="mailto:boss@aradhyacp.in"
+              className="group inline-flex w-full max-w-sm items-center justify-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-6 py-4 transition-all hover:border-white/20 hover:bg-white/[0.06] sm:w-auto sm:max-w-none sm:px-8"
+            >
+              <EmailIcon />
+              <span className="text-base font-medium text-white/80 group-hover:text-white sm:text-lg break-all">
+                boss@aradhyacp.in
+              </span>
+            </a>
+          </motion.div>
 
-        {/* Email */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-12"
-        >
-          <a
-            href="mailto:boss@aradhyacp.in"
-            className="group inline-flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-8 py-4 transition-all hover:border-white/20 hover:bg-white/[0.06]"
+          {/* Social Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mb-16"
           >
-            <EmailIcon />
-            <span className="text-lg font-medium text-white/80 group-hover:text-white">
-              boss@aradhyacp.in
-            </span>
-          </a>
-        </motion.div>
+            <div className="mb-4 text-sm uppercase tracking-wider text-white/40">
+              Find me online
+            </div>
+            <div className="flex justify-center gap-4">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-white/60 transition-all hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
+                  aria-label={link.name}
+                >
+                  {link.icon}
+                </a>
+              ))}
+            </div>
+          </motion.div>
 
-        {/* Social Links */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mb-16"
-        >
-          <div className="mb-4 text-sm uppercase tracking-wider text-white/40">
-            Find me online
-          </div>
-          <div className="flex justify-center gap-4">
-            {socialLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.url}
-                target="_blank"
-                rel="noreferrer"
-                className="flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-white/60 transition-all hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
-                aria-label={link.name}
-              >
-                {link.icon}
-              </a>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Footer */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="border-t border-white/10 pt-8"
-        >
-          {/* <p className="text-sm text-white/40">
+          {/* Footer */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="border-t border-white/10 pt-8"
+          >
+            {/* <p className="text-sm text-white/40">
             Designed and built by{" "}
             <span className="text-white/60">Aradhya CP</span>
           </p> */}
-          <p className="text-sm text-white/30">
-            © {new Date().getFullYear()} <span className="text-white/60">Aradhya CP</span>  All rights reserved.
-          </p>
-        </motion.div>
+            <p className="text-sm text-white/30">
+              © {new Date().getFullYear()} <span className="text-white/60">Aradhya CP</span>  All rights reserved.
+            </p>
+          </motion.div>
         </div>
       </div>
     </section>
