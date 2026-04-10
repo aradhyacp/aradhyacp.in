@@ -10,11 +10,11 @@ import {
   LucideWrench,
 } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
-import { type FC, type SVGProps, useState } from "react";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface TechCategory {
-  icon?: FC<SVGProps<SVGSVGElement>>;
+  icon?: React.ReactNode;
   id: string;
   items: string[];
   label: string;
@@ -28,9 +28,7 @@ const techCategories: TechCategory[] = [
   {
     id: "frontend",
     label: "Frontend",
-    icon: (
-      <LucidePanelsTopLeft className="h-3.5 w-3.5 shrink-0 text-white/70" />
-    ),
+    icon: <LucidePanelsTopLeft className="h-3.5 w-3.5 shrink-0 text-white/70" />,
     items: [
       "React",
       "Next.js",
