@@ -1,12 +1,12 @@
 "use client";
 
 import Floatinglines from "@/components/FloatingLines.jsx";
-import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
+import Contact from "@/components/sections/Contact";
 import GitHubStack from "@/components/sections/GitHubStack";
+import Hero from "@/components/sections/Hero";
 import OpenSource from "@/components/sections/OpenSource";
 import Projects from "@/components/sections/Projects";
-import Contact from "@/components/sections/Contact";
 
 export default function Page() {
   return (
@@ -16,34 +16,34 @@ export default function Page() {
         {/* Wave Background - Only for Hero */}
         <div className="absolute inset-0 z-0">
           <Floatinglines
-            enabledWaves={["top", "middle", "bottom"]}
-            lineCount={[5, 5, 5]}
-            lineDistance={[5, 5, 5]}
             bendRadius={5}
             bendStrength={-0.5}
+            enabledWaves={["top", "middle", "bottom"]}
             interactive={true}
-            parallax={true}
+            lineCount={[5, 5, 5]}
+            lineDistance={[5, 5, 5]}
             linesGradient={[]}
+            parallax={true}
           />
         </div>
         <Hero />
       </section>
 
       {/* Rest of the site with gradient background + grid aesthetics */}
-      <div className="relative gradient-mesh noise-overlay overflow-hidden">
+      <div className="gradient-mesh noise-overlay relative overflow-hidden">
         {/* Ambient glow spots - more vibrant */}
-        <div className="glow-spot glow-spot-coral w-[500px] h-[500px] -top-[100px] -left-[100px]" />
-        <div className="glow-spot glow-spot-lavender w-[600px] h-[600px] top-[15%] -right-[200px]" />
-        <div className="glow-spot glow-spot-mint w-[400px] h-[400px] top-[35%] left-[5%]" />
-        <div className="glow-spot glow-spot-sky w-[500px] h-[500px] top-[55%] -right-[100px]" />
-        <div className="glow-spot glow-spot-peach w-[450px] h-[450px] top-[75%] left-[15%]" />
-        <div className="glow-spot glow-spot-lavender w-[400px] h-[400px] bottom-[5%] right-[10%]" />
+        <div className="glow-spot glow-spot-coral -top-[100px] -left-[100px] h-[500px] w-[500px]" />
+        <div className="glow-spot glow-spot-lavender top-[15%] -right-[200px] h-[600px] w-[600px]" />
+        <div className="glow-spot glow-spot-mint top-[35%] left-[5%] h-[400px] w-[400px]" />
+        <div className="glow-spot glow-spot-sky top-[55%] -right-[100px] h-[500px] w-[500px]" />
+        <div className="glow-spot glow-spot-peach top-[75%] left-[15%] h-[450px] w-[450px]" />
+        <div className="glow-spot glow-spot-lavender right-[10%] bottom-[5%] h-[400px] w-[400px]" />
 
         {/* Dot grid pattern - subtle */}
-        <div className="pointer-events-none absolute inset-0 z-0 dot-grid opacity-20" />
+        <div className="dot-grid pointer-events-none absolute inset-0 z-0 opacity-20" />
 
         {/* Grid overlay with blur */}
-        <div className="pointer-events-none absolute inset-0 z-0 grid-glow opacity-40" />
+        <div className="grid-glow pointer-events-none absolute inset-0 z-0 opacity-40" />
 
         {/* Horizontal ruler lines */}
         {/* <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
@@ -56,7 +56,7 @@ export default function Page() {
         </div> */}
 
         {/* Vertical ruler lines */}
-        <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden hidden lg:block">
+        <div className="pointer-events-none absolute inset-0 z-0 hidden overflow-hidden lg:block">
           <div className="ruler-line-vertical absolute left-[8%] h-full" />
           <div className="ruler-line-vertical absolute left-[92%] h-full" />
         </div>

@@ -1,14 +1,14 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
-import { ReactNode } from "react";
 
 interface MacOSCardProps {
-  title?: string;
+  bodyClassName?: string;
   children: ReactNode;
   className?: string;
   headerClassName?: string;
-  bodyClassName?: string;
+  title?: string;
 }
 
 export default function MacOSCard({
@@ -28,7 +28,7 @@ export default function MacOSCard({
     >
       <div
         className={cn(
-          "flex items-center gap-2 border-b border-white/10 bg-black/40 px-4 py-3",
+          "flex items-center gap-2 border-white/10 border-b bg-black/40 px-4 py-3",
           headerClassName
         )}
       >
@@ -38,7 +38,7 @@ export default function MacOSCard({
           <span className="h-3 w-3 rounded-full bg-[#28c840]" />
         </div>
         {title && (
-          <div className="ml-3 text-xs font-medium text-white/50">{title}</div>
+          <div className="ml-3 font-medium text-white/50 text-xs">{title}</div>
         )}
       </div>
       <div className={cn("p-6", bodyClassName)}>{children}</div>

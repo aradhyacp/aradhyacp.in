@@ -1,27 +1,27 @@
-import { useRef, useState } from 'react';
-import { motion, useMotionValue, useSpring } from 'motion/react';
-import './TiltedCard.css';
+import { motion, useMotionValue, useSpring } from "motion/react";
+import { useRef, useState } from "react";
+import "./TiltedCard.css";
 
 const springValues = {
   damping: 30,
   stiffness: 100,
-  mass: 2
+  mass: 2,
 };
 
 export default function TiltedCard({
   imageSrc,
-  altText = 'Tilted card image',
-  captionText = '',
-  containerHeight = '300px',
-  containerWidth = '100%',
-  imageHeight = '300px',
-  imageWidth = '300px',
+  altText = "Tilted card image",
+  captionText = "",
+  containerHeight = "300px",
+  containerWidth = "100%",
+  imageHeight = "300px",
+  imageWidth = "300px",
   scaleOnHover = 1.1,
   rotateAmplitude = 14,
   showMobileWarning = true,
   showTooltip = true,
   overlayContent = null,
-  displayOverlayContent = false
+  displayOverlayContent = false,
 }) {
   const ref = useRef(null);
 
@@ -34,13 +34,15 @@ export default function TiltedCard({
   const rotateFigcaption = useSpring(0, {
     stiffness: 350,
     damping: 30,
-    mass: 1
+    mass: 1,
   });
 
   const [lastY, setLastY] = useState(0);
 
   function handleMouse(e) {
-    if (!ref.current) return;
+    if (!ref.current) {
+      return;
+    }
 
     const rect = ref.current.getBoundingClientRect();
     const offsetX = e.clientX - rect.left - rect.width / 2;
@@ -75,18 +77,20 @@ export default function TiltedCard({
 
   return (
     <figure
-      ref={ref}
       className="tilted-card-figure"
-      style={{
-        height: containerHeight,
-        width: containerWidth
-      }}
-      onMouseMove={handleMouse}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onMouseMove={handleMouse}
+      ref={ref}
+      style={{
+        height: containerHeight,
+        width: containerWidth,
+      }}
     >
       {showMobileWarning && (
-        <div className="tilted-card-mobile-alert">This effect is not optimized for mobile. Check on desktop.</div>
+        <div className="tilted-card-mobile-alert">
+          This effect is not optimized for mobile. Check on desktop.
+        </div>
       )}
 
       <motion.div
@@ -96,21 +100,23 @@ export default function TiltedCard({
           height: imageHeight,
           rotateX,
           rotateY,
-          scale
+          scale,
         }}
       >
         <motion.img
-          src={imageSrc}
           alt={altText}
           className="tilted-card-img"
+          src={imageSrc}
           style={{
             width: imageWidth,
-            height: imageHeight
+            height: imageHeight,
           }}
         />
 
         {displayOverlayContent && overlayContent && (
-          <motion.div className="tilted-card-overlay">{overlayContent}</motion.div>
+          <motion.div className="tilted-card-overlay">
+            {overlayContent}
+          </motion.div>
         )}
       </motion.div>
 
@@ -121,7 +127,7 @@ export default function TiltedCard({
             x,
             y,
             opacity,
-            rotate: rotateFigcaption
+            rotate: rotateFigcaption,
           }}
         >
           {captionText}

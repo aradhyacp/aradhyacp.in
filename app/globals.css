@@ -91,29 +91,29 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
     overflow-x: hidden;
+    @apply bg-background text-foreground;
   }
   html {
-    @apply font-sans scroll-smooth;
-    letter-spacing: -0.01em;
     overflow-x: hidden;
+    letter-spacing: -0.01em;
+    @apply font-sans scroll-smooth;
   }
 }
 
 /* Glass morphism utility */
 .glass {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
 }
 
 .glass-strong {
   background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(40px);
   border: 1px solid rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
 }
 
 /* macOS window dots */
@@ -126,9 +126,15 @@
   height: 12px;
   border-radius: 50%;
 }
-.macos-dots .red { background: #ff5f57; }
-.macos-dots .yellow { background: #febc2e; }
-.macos-dots .green { background: #28c840; }
+.macos-dots .red {
+  background: #ff5f57;
+}
+.macos-dots .yellow {
+  background: #febc2e;
+}
+.macos-dots .green {
+  background: #28c840;
+}
 
 /* Subtle grid background */
 .grid-bg {
@@ -140,7 +146,10 @@
 
 /* Dot grid pattern */
 .dot-grid {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.15) 1px,
+    transparent 1px
+  );
   background-size: 32px 32px;
 }
 
@@ -156,10 +165,26 @@
 /* Gradient backgrounds - Aurora inspired */
 .gradient-aurora {
   background:
-    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse 60% 40% at 90% 20%, rgba(255, 166, 158, 0.12) 0%, transparent 50%),
-    radial-gradient(ellipse 50% 30% at 10% 60%, rgba(74, 222, 128, 0.1) 0%, transparent 50%),
-    radial-gradient(ellipse 70% 50% at 70% 80%, rgba(147, 197, 253, 0.08) 0%, transparent 50%),
+    radial-gradient(
+      ellipse 80% 50% at 50% 0%,
+      rgba(120, 119, 198, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 60% 40% at 90% 20%,
+      rgba(255, 166, 158, 0.12) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 50% 30% at 10% 60%,
+      rgba(74, 222, 128, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 70% 50% at 70% 80%,
+      rgba(147, 197, 253, 0.08) 0%,
+      transparent 50%
+    ),
     linear-gradient(180deg, #0a0a0a 0%, #0f0f12 50%, #0a0a0a 100%);
 }
 
@@ -180,56 +205,92 @@
   position: relative;
 }
 .noise-overlay::before {
-  content: '';
   position: absolute;
   inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  content: "";
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   opacity: 0.03;
-  pointer-events: none;
-  z-index: 1;
 }
 
 /* Radial gradient glow spots - more vibrant */
 .glow-spot {
   position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.25;
   pointer-events: none;
+  border-radius: 50%;
   mix-blend-mode: screen;
+  opacity: 0.25;
+  filter: blur(80px);
 }
 
 .glow-spot-coral {
-  background: radial-gradient(circle, rgba(255, 154, 139, 0.5) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 154, 139, 0.5) 0%,
+    transparent 70%
+  );
 }
 
 .glow-spot-lavender {
-  background: radial-gradient(circle, rgba(167, 139, 250, 0.4) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(167, 139, 250, 0.4) 0%,
+    transparent 70%
+  );
 }
 
 .glow-spot-mint {
-  background: radial-gradient(circle, rgba(74, 222, 128, 0.35) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(74, 222, 128, 0.35) 0%,
+    transparent 70%
+  );
 }
 
 .glow-spot-sky {
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.35) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(56, 189, 248, 0.35) 0%,
+    transparent 70%
+  );
 }
 
 .glow-spot-peach {
-  background: radial-gradient(circle, rgba(255, 214, 165, 0.4) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 214, 165, 0.4) 0%,
+    transparent 70%
+  );
 }
 
 /* Fade vignette for marquee edges */
 .vignette-x {
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
 }
 
 /* Text gradient */
 .text-gradient {
-  background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.7) 100%);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.7) 100%
+  );
+  -webkit-background-clip: text;
   background-clip: text;
 }
 
@@ -253,13 +314,21 @@
 
 /* Animation utilities */
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes marquee-reverse {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .animate-marquee {
@@ -282,6 +351,7 @@
 
 /* Ruler lines - refined with glow */
 .ruler-line {
+  position: relative;
   height: 1px;
   background: linear-gradient(
     to right,
@@ -291,13 +361,12 @@
     rgba(255, 255, 255, 0.03) 90%,
     transparent 100%
   );
-  position: relative;
 }
 
 .ruler-line::after {
-  content: '';
   position: absolute;
   inset: -2px 0;
+  content: "";
   background: linear-gradient(
     to right,
     transparent 0%,
@@ -311,6 +380,7 @@
 
 /* Vertical ruler lines */
 .ruler-line-vertical {
+  position: relative;
   width: 1px;
   height: 100%;
   background: linear-gradient(
@@ -321,13 +391,12 @@
     rgba(255, 255, 255, 0.03) 90%,
     transparent 100%
   );
-  position: relative;
 }
 
 .ruler-line-vertical::after {
-  content: '';
   position: absolute;
   inset: 0 -2px;
+  content: "";
   background: linear-gradient(
     to bottom,
     transparent 0%,

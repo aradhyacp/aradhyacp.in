@@ -15,12 +15,22 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Aradhya CP | Full Stack Developer",
-  description: "Full Stack Developer & Builder. Building AI-integrated applications, developer tools, and contributing to open source.",
-  keywords: ["developer", "full stack", "react", "next.js", "open source", "AI", "Aradhya"],
+  description:
+    "Full Stack Developer & Builder. Building AI-integrated applications, developer tools, and contributing to open source.",
+  keywords: [
+    "developer",
+    "full stack",
+    "react",
+    "next.js",
+    "open source",
+    "AI",
+    "Aradhya",
+  ],
   authors: [{ name: "Aradhya CP" }],
   openGraph: {
     title: "Aradhya CP | Full Stack Developer",
-    description: "Full Stack Developer & Builder. Building AI-integrated applications and developer tools.",
+    description:
+      "Full Stack Developer & Builder. Building AI-integrated applications and developer tools.",
     type: "website",
   },
 };
@@ -32,15 +42,18 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
       className={cn(
         "h-full antialiased",
         geistMono.variable,
         jetbrainsMono.variable
       )}
-      style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", system-ui, sans-serif' }}
+      lang="en"
+      style={{
+        fontFamily:
+          '-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", system-ui, sans-serif',
+      }}
     >
-      <body className="min-h-full flex flex-col bg-black text-white overflow-x-hidden">
+      <body className="flex min-h-full flex-col overflow-x-hidden bg-black text-white">
         {children}
       </body>
     </html>

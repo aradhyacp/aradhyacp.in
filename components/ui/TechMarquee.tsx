@@ -1,27 +1,65 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 interface TechItem {
-  name: string;
   icon: string;
   invert?: boolean;
+  name: string;
 }
 
 const techStack: TechItem[] = [
-  { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-  { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", invert: true },
-  { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-  { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-  { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
-  { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-  { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-  { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", invert: true },
-  { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-  { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
-  { name: "Cloudflare", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudflare/cloudflare-original.svg" },
-  { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+  {
+    name: "React",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  },
+  {
+    name: "Next.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    invert: true,
+  },
+  {
+    name: "TypeScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  },
+  {
+    name: "Node.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+  },
+  {
+    name: "Docker",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  },
+  {
+    name: "Git",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  },
+  {
+    name: "GitHub",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    invert: true,
+  },
+  {
+    name: "Python",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  },
+  {
+    name: "PostgreSQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  },
+  {
+    name: "Cloudflare",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudflare/cloudflare-original.svg",
+  },
+  {
+    name: "VS Code",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+  },
 ];
 
 interface TechMarqueeProps {
@@ -29,7 +67,10 @@ interface TechMarqueeProps {
   reverse?: boolean;
 }
 
-export default function TechMarquee({ className, reverse = false }: TechMarqueeProps) {
+export default function TechMarquee({
+  className,
+  reverse = false,
+}: TechMarqueeProps) {
   const items = [...techStack, ...techStack];
 
   return (
@@ -37,30 +78,30 @@ export default function TechMarquee({ className, reverse = false }: TechMarqueeP
       <div className="vignette-x overflow-hidden">
         <div
           className={cn(
-            "flex gap-8 md:gap-16 w-max",
+            "flex w-max gap-8 md:gap-16",
             reverse ? "animate-marquee-reverse" : "animate-marquee"
           )}
           style={{ animationDuration: "40s" }}
         >
           {items.map((tech, index) => (
             <div
-              key={`${tech.name}-${index}`}
               className="group flex flex-col items-center gap-3 transition-transform hover:scale-110"
+              key={`${tech.name}-${index}`}
             >
-              <div className="relative h-12 w-12 md:h-16 md:w-16 rounded-xl bg-white/5 p-3 transition-all group-hover:bg-white/10 group-hover:shadow-lg">
+              <div className="relative h-12 w-12 rounded-xl bg-white/5 p-3 transition-all group-hover:bg-white/10 group-hover:shadow-lg md:h-16 md:w-16">
                 <Image
-                  src={tech.icon}
                   alt={tech.name}
                   className={cn(
-                    "h-full w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity",
+                    "h-full w-full object-contain opacity-80 transition-opacity group-hover:opacity-100",
                     tech.invert && "invert"
                   )}
                   height={40}
-                  width={40}
                   sizes="40px"
+                  src={tech.icon}
+                  width={40}
                 />
               </div>
-              <span className="text-xs text-white/40 group-hover:text-white/70 transition-colors font-medium">
+              <span className="font-medium text-white/40 text-xs transition-colors group-hover:text-white/70">
                 {tech.name}
               </span>
             </div>
