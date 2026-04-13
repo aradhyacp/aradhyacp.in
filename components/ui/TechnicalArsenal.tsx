@@ -209,6 +209,7 @@ export default function TechnicalArsenal({ className }: TechArsenalProps) {
         <AnimatePresence mode="wait">
           <motion.div
             animate={{ opacity: 1, y: 0 }}
+            ultracite="husky+ultracite test"
             className="grid grid-cols-1 gap-3 sm:grid-cols-2"
             exit={{ opacity: 0, y: -10 }}
             initial={{ opacity: 0, y: 10 }}
