@@ -2,6 +2,7 @@
 
 import { LucideGitPullRequestArrow } from "lucide-react";
 import { motion } from "motion/react";
+import Image from "next/image";
 import MacOSCard from "@/components/ui/MacOSCard";
 import ShinyText from "../ShinyText";
 
@@ -144,10 +145,12 @@ export default function OpenSource() {
                     </h3>
                     <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-white/50">
                       {contrib.org_logo && (
-                        <img
+                        <Image
                           alt={contrib.org}
                           className="h-3 w-3"
+                          height={12}
                           src={contrib.org_logo}
+                          width={12}
                         />
                       )}{" "}
                       {contrib.org}
