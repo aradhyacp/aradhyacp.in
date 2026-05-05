@@ -38,6 +38,9 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Aradhya CP Portfolio",
   },
+  icons: {
+    icon: [{ url: "/pfp.ico" }],
+  },
 };
 
 export default function RootLayout({
