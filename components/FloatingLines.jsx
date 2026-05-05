@@ -253,6 +253,7 @@ export default function FloatingLines({
   const currentInfluenceRef = useRef(0);
   const targetParallaxRef = useRef(new Vector2(0, 0));
   const currentParallaxRef = useRef(new Vector2(0, 0));
+  const isVisibleRef = useRef(true);
 
   const getLineCount = (waveType) => {
     if (typeof lineCount === "number") {
@@ -423,6 +424,14 @@ export default function FloatingLines({
       ro.observe(container);
     }
 
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        isVisibleRef.current = entry.isIntersecting;
+      },
+      { threshold: 0 }
+    );
+    io.observe(container);
+
     const handlePointerMove = (event) => {
       const rect = renderer.domElement.getBoundingClientRect();
       const x = event.clientX - rect.left;
@@ -459,6 +468,11 @@ export default function FloatingLines({
         return;
       }
 
+      if (!isVisibleRef.current) {
+        raf = requestAnimationFrame(renderLoop);
+        return;
+      }
+
       uniforms.iTime.value = clock.getElapsedTime();
 
       if (interactive) {
@@ -492,6 +506,7 @@ export default function FloatingLines({
       if (ro) {
         ro.disconnect();
       }
+      io.disconnect();
 
       if (interactive) {
         renderer.domElement.removeEventListener(

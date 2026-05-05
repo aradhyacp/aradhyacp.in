@@ -5,6 +5,7 @@ import {
   useTransform,
 } from "motion/react";
 import { useCallback, useEffect, useRef, useState } from "react";
+
 import "./ShinyText.css";
 
 const ShinyText = ({
@@ -25,12 +26,29 @@ const ShinyText = ({
   const elapsedRef = useRef(0);
   const lastTimeRef = useRef(null);
   const directionRef = useRef(direction === "left" ? 1 : -1);
+  const containerRef = useRef(null);
+  const isVisibleRef = useRef(false);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) {
+      return;
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisibleRef.current = entry.isIntersecting;
+      },
+      { threshold: 0 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   const animationDuration = speed * 1000;
   const delayDuration = delay * 1000;
 
   useAnimationFrame((time) => {
-    if (disabled || isPaused) {
+    if (disabled || isPaused || !isVisibleRef.current) {
       lastTimeRef.current = null;
       return;
     }
@@ -119,6 +137,7 @@ const ShinyText = ({
       className={`shiny-text ${className}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      ref={containerRef}
       style={{ ...gradientStyle, backgroundPosition }}
     >
       {text}

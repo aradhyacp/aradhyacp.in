@@ -27,11 +27,16 @@ export const metadata: Metadata = {
     "Aradhya",
   ],
   authors: [{ name: "Aradhya CP" }],
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: "Aradhya CP | Full Stack Developer",
     description:
       "Full Stack Developer & Builder. Building AI-integrated applications and developer tools.",
     type: "website",
+    siteName: "Aradhya CP Portfolio",
   },
 };
 

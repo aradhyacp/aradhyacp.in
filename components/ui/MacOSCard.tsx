@@ -21,8 +21,7 @@ export default function MacOSCard({
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] shadow-2xl",
-        "backdrop-blur-xl",
+        "overflow-hidden rounded-xl border border-white/10 bg-white/3 shadow-2xl backdrop-blur-xl",
         className
       )}
     >

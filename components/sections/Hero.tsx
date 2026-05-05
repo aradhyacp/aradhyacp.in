@@ -2,6 +2,7 @@
 
 import { LucideMail } from "lucide-react";
 import { motion } from "motion/react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import MacOSCard from "@/components/ui/MacOSCard";
 import SocialLinks from "@/components/ui/SocialLinks";
@@ -150,17 +151,14 @@ export default function Hero() {
               {/* Avatar + Info */}
               <div className="flex items-center gap-4">
                 <div className="relative h-16 w-16 overflow-hidden rounded-full border-2 border-white/20 bg-white/10">
-                  {profile?.avatar_url ? (
-                    <img
-                      alt="Aradhya CP"
-                      className="h-full w-full object-cover"
-                      src="/pfp.webp"
-                    />
-                  ) : (
-                    <div className="flex h-full w-full items-center justify-center text-white/40 text-xl">
-                      A
-                    </div>
-                  )}
+                  <Image
+                    alt="Aradhya CP"
+                    className="h-full w-full object-cover"
+                    height={64}
+                    priority
+                    src="/pfp.webp"
+                    width={64}
+                  />
                   <div className="absolute inset-0 rounded-full ring-2 ring-[#238636]/50" />
                 </div>
                 <div className="min-w-0">

@@ -159,7 +159,6 @@
     linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
   background-size: 60px 60px;
-  filter: blur(0.5px);
 }
 
 /* Gradient backgrounds - Aurora inspired */
@@ -220,31 +219,34 @@
   pointer-events: none;
   border-radius: 50%;
   mix-blend-mode: screen;
-  opacity: 0.25;
-  filter: blur(80px);
+  opacity: 0.2;
+  transform: translateZ(0);
 }
 
 .glow-spot-coral {
   background: radial-gradient(
     circle,
-    rgba(255, 154, 139, 0.5) 0%,
-    transparent 70%
+    rgba(255, 154, 139, 0.35) 0%,
+    rgba(255, 154, 139, 0.08) 30%,
+    transparent 60%
   );
 }
 
 .glow-spot-lavender {
   background: radial-gradient(
     circle,
-    rgba(167, 139, 250, 0.4) 0%,
-    transparent 70%
+    rgba(167, 139, 250, 0.3) 0%,
+    rgba(167, 139, 250, 0.07) 30%,
+    transparent 60%
   );
 }
 
 .glow-spot-mint {
   background: radial-gradient(
     circle,
-    rgba(74, 222, 128, 0.35) 0%,
-    transparent 70%
+    rgba(74, 222, 128, 0.25) 0%,
+    rgba(74, 222, 128, 0.06) 30%,
+    transparent 60%
   );
 }
 
@@ -375,7 +377,6 @@
     rgba(255, 255, 255, 0.02) 80%,
     transparent 100%
   );
-  filter: blur(4px);
 }
 
 /* Vertical ruler lines */
@@ -405,7 +406,6 @@
     rgba(255, 255, 255, 0.02) 80%,
     transparent 100%
   );
-  filter: blur(4px);
 }
 
 /* Section divider with accent */
@@ -419,5 +419,4 @@
     rgba(139, 92, 246, 0.1) 80%,
     transparent 100%
   );
-  filter: blur(0.5px);
 }
