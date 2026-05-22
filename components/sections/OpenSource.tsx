@@ -23,15 +23,16 @@ const contributions: Contribution[] = [
     repo: "streamdown",
     org: "Vercel",
     org_logo: "/vercel.svg",
-    stars: "4,900+",
+    stars: "5,200+",
     role: "Contributor",
     description:
       "Drop-in replacement for react-markdown designed for AI-powered streaming. Powers Vercel's AI Elements.",
     prs: [
-      "Fixed broken image handling with proper fallback UI",
-      "Added 'Copy as Markdown' for tables",
-      "Made code block header buttons sticky",
-      "Fixed Tailwind CSS purging for plugin packages",
+      "Fixed streaming of custom markdown input in PlaygroundEditor",
+      "Fixed wide Mermaid diagrams rendering with extremely small text due to responsive SVG sizing",
+      "Enhanced CSV export with configurable separator support and added tests",
+      "Improved Mermaid fullscreen overlay accessibility and added stable data attributes",
+      "Comprehensive accessibility improvements for Mermaid toolbar icon buttons",
     ],
     url: "https://github.com/vercel/streamdown",
     pr_url:
