@@ -10,6 +10,7 @@ interface Project {
   github: string;
   live?: string;
   name: string;
+  npm?: string;
   stats?: { label: string; value: string }[];
   tagline: string;
   tech: string[];
@@ -24,7 +25,7 @@ const projects: Project[] = [
     tech: ["Cloudflare Workers", "WebAssembly", "resvg-wasm", "TypeScript"],
     stats: [
       { label: "Daily Users", value: "500+" },
-      { label: "GitHub Stars", value: "45" },
+      { label: "GitHub Stars", value: "54" },
     ],
     github: "https://github.com/aradhyacp/LifeGrid",
     live: "https://lifegrid-wallpapers.pages.dev",
@@ -60,18 +61,31 @@ const projects: Project[] = [
       // { label: "Analyzers", value: "5 (Malware, Steg, Recon, Web, Macro)" },
       // { label: "Pipeline", value: "Multi-pass (3–5 iterations)" },
       // { label: "Output", value: "YARA + SIGMA + MITRE + PDF Report" }
-      { label: "GitHub Stars", value: "10" },
+      { label: "GitHub Stars", value: "11" },
     ],
     github: "https://github.com/aradhyacp/SecFlow",
   },
+  // {
+  //   name: "AI PR Review Bot",
+  //   tagline: "Automated code review",
+  //   description:
+  //     "GitHub Action that automatically reviews pull requests using Google Gemini AI. Analyzes code quality, maintainability, potential bugs, and security issues with structured JSON feedback.",
+  //   tech: ["GitHub Actions", "Google Gemini", "TypeScript"],
+  //   stats: [{ label: "Reviews", value: "Code quality, security, bugs" }],
+  //   github: "https://github.com/aradhyacp/ai-pr-review-bot",
+  // },
   {
-    name: "AI PR Review Bot",
-    tagline: "Automated code review",
+    name: "ts-enverify",
+    tagline: "Type-safe environment validation",
     description:
-      "GitHub Action that automatically reviews pull requests using Google Gemini AI. Analyzes code quality, maintainability, potential bugs, and security issues with structured JSON feedback.",
-    tech: ["GitHub Actions", "Google Gemini", "TypeScript"],
-    stats: [{ label: "Reviews", value: "Code quality, security, bugs" }],
-    github: "https://github.com/aradhyacp/ai-pr-review-bot",
+      "Zero-dependency TypeScript library for validating and parsing environment variables at startup. Provides automatic type inference, built-in validators for ports, URLs, booleans, enums, and clear startup error reporting.",
+    tech: ["TypeScript", "Node.js", "Environment Validation"],
+    stats: [
+      { label: "Features", value: "Type inference, zero dependencies" },
+      { label: "Weekly Downloads", value: "350+" },
+    ],
+    github: "https://github.com/aradhyacp/ts-enverify",
+    npm: "https://www.npmjs.com/package/ts-enverify",
   },
 ];
 
@@ -95,6 +109,21 @@ const ExternalLinkIcon = () => (
     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
     <polyline points="15 3 21 3 21 9" />
     <line x1="10" x2="21" y1="14" y2="3" />
+  </svg>
+);
+
+const NpmSvg = () => (
+  <svg
+    aria-hidden="true"
+    className="h-7 w-7"
+    viewBox="0 0 128 128"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title id="npm-title">npm logo</title>
+    <path
+      d="M2 38.5h124v43.71H64v7.29H36.44v-7.29H2zm6.89 36.43h13.78V53.07h6.89v21.86h6.89V45.79H8.89zm34.44-29.14v36.42h13.78v-7.28h13.78V45.79zm13.78 7.29H64v14.56h-6.89zm20.67-7.29v29.14h13.78V53.07h6.89v21.86h6.89V53.07h6.89v21.86h6.89V45.79z"
+      fill="#cb3837"
+    />
   </svg>
 );
 
@@ -227,6 +256,17 @@ export default function Projects() {
                     >
                       <ExternalLinkIcon />
                       Live Demo
+                    </a>
+                  )}
+                  {project.npm && (
+                    <a
+                      className="flex flex-1 items-center justify-center gap-2 rounded-lg border-[3px] border-transparent bg-[#864223]/10 px-4 py-2.5 text-[#ffd6c7] text-sm transition-all [border-image:linear-gradient(139deg,#fb8817,#ff4b01,#c12127,#e02aff)_1] hover:bg-[#1b222c] hover:text-white hover:shadow-[0_0_18px_rgba(255,75,1,0.25)]"
+                      href={project.npm}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      <NpmSvg />
+                      npmjs
                     </a>
                   )}
                 </div>
