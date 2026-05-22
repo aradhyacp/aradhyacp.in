@@ -28,7 +28,9 @@ const techCategories: TechCategory[] = [
   {
     id: "frontend",
     label: "Frontend",
-    icon: <LucidePanelsTopLeft className="h-3.5 w-3.5 shrink-0 text-white/70" />,
+    icon: (
+      <LucidePanelsTopLeft className="h-3.5 w-3.5 shrink-0 text-white/70" />
+    ),
     items: [
       "React",
       "Next.js",
